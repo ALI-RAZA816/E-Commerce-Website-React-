@@ -1,0 +1,45 @@
+.header{
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 47px;
+    width: 100%;
+    max-width: 167px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.links ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.links ul li{
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.links ul li::after{
+    position: absolute;
+    left:50%;
+    bottom: -3px;
+    width: 50%;
+    transform:translate(-50%,-50%);
+    height: 1px;
+    content: " ";
+    background-color: #2A2A2A;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: #2A2A2A;
+    font-size: 16px;
+}
