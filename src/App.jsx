@@ -1,10 +1,12 @@
 import './App.css'
-import Header from './Component/Header/Header'
+import Header from './Component/HomePage/Header/Header'
+import HeroSection from './Component/HomePage/HeroSection/HeroSection'
 function App() {
   return (
     <div>
         <div className='container'>
-          <Header/>          
+          <Header/>
+          <HeroSection/>     
         </div>
     </div>
   )

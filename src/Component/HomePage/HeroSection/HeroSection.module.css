@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.heroContainer{
+    display: flex;
+    margin-top: .5rem;
+    min-height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e2dfdf;
+}
+
+.leftBox{
+    padding-left: 6rem;
+}
+
+.leftBox span{
+    font-size: 18px;
+    color: #414141;
+    font-weight: medium;
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+}
+
+.leftBox span:first-child{
+    margin-left: 3rem;
+}
+
+.leftBox span::after{
+    position: absolute;
+    content: " ";
+    top: 50%;
+    background-color: #414141;
+    height: 2px;
+    width: 12%;
+    transform: translate(-50%,-50%);
+}
+
+.leftBox span:first-child:after{
+    left:-25px;
+}
+
+.leftBox span:last-child:after{
+    left:125px;
+}
+
+.leftBox h1{
+    font-size:55px;
+    color: #414141;
+    margin: .5rem 0;
+    font-weight: normal;
+    font-family: "Prata", serif;
+}
+
+.rightBox{
+    background-color: #FFDAD6;
+}
+
+
+.rightBox img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
