@@ -1,0 +1,34 @@
+.productsCollection{
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.productsCollection h1{
+    font-size: 35px;
+    color: #707070;
+    position: relative;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.productsCollection h1::before{
+    position: absolute;
+    content: " ";
+    top: 50%;
+    right:33%;
+    background-color: #343434;
+    height: 2px;
+    width:4%;
+}
+
+.productsCollection h1 span{
+    color: #343434;
+    font-weight: 550;
+}
+
+.productsCollection p{
+    color: #868686;
+    font-size: 18px;
+    margin-top: .3rem;
+    font-weight: normal;
+}

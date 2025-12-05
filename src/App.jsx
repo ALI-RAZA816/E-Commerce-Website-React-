@@ -1,4 +1,5 @@
 import './App.css'
+import Collection from './Component/HomePage/Collection/Collection'
 import Header from './Component/HomePage/Header/Header'
 import HeroSection from './Component/HomePage/HeroSection/HeroSection'
 function App() {
@@ -6,7 +7,8 @@ function App() {
     <div>
         <div className='container'>
           <Header/>
-          <HeroSection/>     
+          <HeroSection/>
+          <Collection/>    
         </div>
     </div>
   )

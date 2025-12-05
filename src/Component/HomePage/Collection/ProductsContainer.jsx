@@ -1,0 +1,66 @@
+import style from '../Collection/ProductsGrid.module.css';
+import Item from './Item';
+export default function ProductsContainer() {
+
+    const collectionProduct = [
+        {
+            img:'/Images/collections/Rectangle 3608.png',
+            title:'Women Round Neck Cotton Top',
+            price:'149'
+        },
+        {
+            img:'/Images/collections/Rectangle 3609.png',
+            title:'Women Round Neck Cotton Top',
+            price:'40'
+        },
+        {
+            img:'/Images/collections/Rectangle 3619.png',
+            title:'Women Round Neck Cotton Top',
+            price:'40'
+        },
+        {
+            img:'/Images/collections/Rectangle 3611.png',
+            title:'Men Round Neck Pure Cotton T-shirt',
+            price:'46'
+        },
+        {
+            img:'/Images/collections/Rectangle 3635.png',
+            title:'Men Round Neck Pure Cotton T-shirt',
+            price:'26'
+        },
+        {
+            img:'/Images/collections/Rectangle 3613.png',
+            title:'Men Printed Plain Cotton Shirt',
+            price:'52'
+        },
+        {
+            img:'/Images/collections/Rectangle 3615.png',
+            title:'Women Round Neck Cotton Top',
+            price:'30'
+        },
+        {
+            img:'/Images/collections/Rectangle 3616.png',
+            title:'Women Round Neck Cotton Top',
+            price:'34'
+        },
+         {
+            img:'/Images/collections/Rectangle 3634.png',
+            title:'Men Round Neck Pure Cotton T-shirt',
+            price:'26'
+        },
+         {
+            img:'/Images/collections/Rectangle 3617.png',
+            title:'Men Round Neck Pure Cotton T-shirt',
+            price:'68'
+        },
+    ]
+  return (
+    <div className={style.ProductsContainer}>
+      <div className={style.productGrid}>
+        {collectionProduct.map((item,index)=>{
+            return <Item key = {index} img = {item.img} title = {item.title} price = {item.price} /> 
+        })}
+      </div>
+    </div>
+  )
+}
