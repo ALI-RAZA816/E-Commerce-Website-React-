@@ -1,4 +1,4 @@
-import style from '../BestSeller/Item.module.css';
+import style from './Item.module.css';
 export default function Item({img, title ,price}) {
     return (
         <div className={style.card}>

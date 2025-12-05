@@ -1,0 +1,29 @@
+
+.container{
+    display: grid;
+    margin: 10rem 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container div{
+    text-align: center;
+}
+
+.container div img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    /* margin-bottom: .5rem; */
+}
+
+.container div h3{
+    color: #373737;
+    font-size: 18px;
+    margin: .5rem 0;
+}
+
+.container div p{
+    font-size: 18px;
+    color: #898989;
+}
+

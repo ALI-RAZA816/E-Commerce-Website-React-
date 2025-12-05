@@ -1,6 +1,6 @@
 import React from 'react'
-import style from '../BestSeller/BestSeller.module.css';
-import Item from '../BestSeller/Item';
+import style from './BestSeller.module.css';
+import Item from './Item';
 export default function BestSeller() {
      const collectionProduct = [
         {
