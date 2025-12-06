@@ -7,14 +7,14 @@ import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 
 
 
-export default function Header() {
+export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks}) {
   return (
     <header className={style.header}>
         <div className={style.logo}>
             <img src="/Images/logo.png" alt="" />
         </div>
-        <div className={style.links}>
-            <span><FaAngleLeft /> Back</span>
+        <div className={`${style.links} ${showNavlinks === true && style.active}`}>
+            <span><FaAngleLeft onClick={removeLinksHandler} /> Back</span>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Collection</a></li>
@@ -26,7 +26,7 @@ export default function Header() {
             <IoSearch style={{fontSize:'23px',marginRight:'.8rem'}} />
             <FaUser style={{fontSize:'23px',marginRight:'.8rem'}}  />
             <LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}}  />
-            <HiOutlineBars3BottomRight className={style.bars} />
+            <HiOutlineBars3BottomRight onClick={NavLinksHandler} className={style.bars} />
         </div>
     </header>
   )

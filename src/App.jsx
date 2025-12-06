@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import BestSeller from './Component/HomePage/BestSeller/BestSeller'
 import Collection from './Component/HomePage/Collection/Collection'
@@ -7,10 +8,15 @@ import HeroSection from './Component/HomePage/HeroSection/HeroSection'
 import Subscription from './Component/HomePage/Subscription/Subscription'
 import Support from './Component/HomePage/Support/Support'
 function App() {
+
+  const [showNavlinks, setNavlinks] = useState(false);
+  const NavLinksHandler = () => setNavlinks(true);
+  const removeLinksHandler = () => setNavlinks(false);
+
   return (
     <div>
       <div className='container'>
-        <Header />
+        <Header removeLinksHandler = {removeLinksHandler} showNavlinks = {showNavlinks} NavLinksHandler = {NavLinksHandler} />
         <HeroSection />
         <main>
           <Collection />

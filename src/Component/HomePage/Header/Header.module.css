@@ -72,6 +72,11 @@
         left: -100%;
         padding: .5rem;
         background-color: #fff;
+        transition: left .20s ease-in-out;
+    }
+
+    .active{
+        left: 0 !important;
     }
     
     .links > span{
