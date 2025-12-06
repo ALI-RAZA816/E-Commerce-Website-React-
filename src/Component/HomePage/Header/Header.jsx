@@ -4,7 +4,9 @@ import { LuShoppingCart } from "react-icons/lu";
 import style from '../Header/Header.module.css';
 import { FaAngleLeft } from "react-icons/fa6";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-
+import {
+  Link
+} from "react-router-dom";
 
 
 export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks}) {
@@ -16,10 +18,10 @@ export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks
         <div className={`${style.links} ${showNavlinks === true && style.active}`}>
             <span><FaAngleLeft onClick={removeLinksHandler} /> Back</span>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Collection</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/collection">Collection</Link></li>
+                <li><Link to="/">About</Link></li>
+                <li><Link to="/">Contact</Link></li>
             </ul>
         </div>
         <div className="icons" style={{display:'flex',alignItems:'center'}}>
