@@ -68,3 +68,30 @@
         font-size:40px;
     }
 }
+@media  screen and (max-width:650px) {
+   .heroContainer{
+    padding: 0 !important;
+    text-align: center;
+    grid-template-rows: 200px;
+    grid-template-columns: 1fr ;
+}
+
+.rightBox{
+    text-align: center;
+}
+
+.leftBox span:first-child:after{
+    /* left:32%; */
+    display: none;
+}
+
+.leftBox span:last-child:after{
+   display: none;
+}
+
+.leftBox span:first-child{
+    margin-left:0 !important;
+}
+
+}
+
