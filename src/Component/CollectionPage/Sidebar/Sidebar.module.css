@@ -1,0 +1,37 @@
+.sidebar{
+    height: 100vh;
+}
+.sidebar h1{
+    font-size: 25px;
+    font-weight: normal;
+    color: #343434;
+    margin-bottom:1.2rem;
+    text-transform: uppercase;
+}
+
+.type,
+.category{
+    padding: 1rem;
+    border: 1px solid #C8C8C8;
+}
+
+.type div,
+.category div{
+    margin-bottom: .5rem;
+}
+
+.type h3,
+.category h3{
+    font-size: 16px;
+    margin-bottom: .8rem;
+    color: #212121;
+    font-weight:550;
+    text-transform: uppercase;
+}
+
+.type label,
+.category label{
+    font-size: 16px;
+    margin-left: .3rem;
+    color: #272727;
+}

@@ -12,7 +12,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import CollectionHeader from './Component/CollectionPage/Header/CollectionHeader';
+import CollectionPage from './Component/CollectionPage/Header/CollectionPage';
+
 function App() {
 
   const [showNavlinks, setNavlinks] = useState(false);
@@ -35,7 +36,7 @@ function App() {
               </main>
             </Route>
             <Route exact path='/collection'>
-              <CollectionHeader/>
+              <CollectionPage/>
             </Route>
           </Switch>
           <footer>
