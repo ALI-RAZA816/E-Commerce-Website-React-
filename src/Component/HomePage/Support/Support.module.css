@@ -1,29 +1,42 @@
-
-.container{
+.container {
     display: grid;
     margin: 15rem 0;
+    gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.container div{
+.container div {
     text-align: center;
 }
 
-.container div img{
+.container div img {
     height: 50px;
     width: 50px;
     object-fit: contain;
     /* margin-bottom: .5rem; */
 }
 
-.container div h3{
+.container div h3 {
     color: #373737;
     font-size: 18px;
     margin: .5rem 0;
 }
 
-.container div p{
+.container div p {
     font-size: 18px;
     color: #898989;
 }
 
+@media screen and (max-width:992px) {
+    .container {
+        gap: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:764px) {
+    .container {
+        gap: 100px;
+        grid-template-columns: 1fr;
+    }
+}
