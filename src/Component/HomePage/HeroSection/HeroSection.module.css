@@ -2,18 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 .heroContainer{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-top: .5rem;
-    height: 500px;
     overflow: hidden;
-    gap: 20px;
     align-items: center;
-    justify-content: space-between;
+    padding-left:2rem;
+    justify-content: center;
     border: 1px solid #e2dfdf;
-}
-
-.leftBox{
-    padding-left: 6rem;
 }
 
 .leftBox span{
@@ -35,12 +31,12 @@
     top: 50%;
     background-color: #414141;
     height: 2px;
-    width: 12%;
+    width: 5%;
     transform: translate(-50%,-50%);
 }
 
 .leftBox span:first-child:after{
-    left:-25px;
+    left:-20px;
 }
 
 .leftBox span:last-child:after{
@@ -48,6 +44,7 @@
 }
 
 .leftBox h1{
+    text-wrap: nowrap;
     font-size:55px;
     color: #414141;
     margin: .5rem 0;
@@ -56,8 +53,6 @@
 }
 
 .rightBox{
-    height: 500px;
-    /* width: 100%; */
     background-color: #FFDAD6;
 }
 
@@ -66,4 +61,10 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+@media  screen and (max-width:1100px) {
+    .leftBox h1{
+        font-size:40px;
+    }
 }
