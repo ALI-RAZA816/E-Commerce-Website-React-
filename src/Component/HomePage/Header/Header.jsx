@@ -27,7 +27,7 @@ export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks
         <div className="icons" style={{display:'flex',alignItems:'center'}}>
             <IoSearch style={{fontSize:'23px',marginRight:'.8rem'}} />
             <FaUser style={{fontSize:'23px',marginRight:'.8rem'}}  />
-            <LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}} />
+            <Link style={{color:'#333'}}  to="/cart"><LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}} /></Link>
             <HiOutlineBars3BottomRight onClick={NavLinksHandler} className={style.bars} />
         </div>
     </header>

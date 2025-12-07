@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import CollectionPage from './Component/CollectionPage/Header/CollectionPage';
 import ProductPageDetail from './Component/ProductDetail/ProductPageDetail';
+import Cart from './Component/Cart/Cart';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
               </Route>
               <Route exact path='/productDetail'>
                 <ProductPageDetail/>
+              </Route>
+              <Route exact path='/cart'>
+                <Cart/>
               </Route>
             </main>
           </Switch>
