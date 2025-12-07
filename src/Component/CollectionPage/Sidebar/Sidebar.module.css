@@ -1,5 +1,6 @@
 .sidebar{
     height: 100vh;
+    transition: height .30s ease-in-out;
 }
 .sidebar h1{
     font-size: 25px;
@@ -34,4 +35,27 @@
     font-size: 16px;
     margin-left: .3rem;
     color: #272727;
+}
+
+.filterIcon{
+    margin-right:.5rem;
+    font-size:20px;
+    cursor:pointer;
+    display: none;
+}
+
+
+@media screen and (max-width:764px) {
+    .sidebar{
+        height:36px;
+        overflow: hidden;
+    }
+
+    .filterIcon{
+        display: inline-block;
+    }
+
+    .active{
+        height:372px;
+    }
 }

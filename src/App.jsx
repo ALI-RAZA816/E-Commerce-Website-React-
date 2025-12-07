@@ -19,8 +19,10 @@ import Description from './Component/ProductDetail/Description';
 function App() {
 
   const [showNavlinks, setNavlinks] = useState(false);
+  const [showFilter, setShowFilter] = useState(false);
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
+  const showFilterBox = () => setShowFilter(!showFilter);
 
   return (
     <div>
@@ -37,7 +39,7 @@ function App() {
                 <Subscription />
               </Route>
               <Route exact path='/collection'>
-                <CollectionPage />
+                <CollectionPage showFilter = {showFilter} showFilterBox = {showFilterBox} />
               </Route>
               <Route exact path='/productDetail'>
                 <ProductPageDetail/>

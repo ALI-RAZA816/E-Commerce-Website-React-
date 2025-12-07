@@ -16,7 +16,7 @@ export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks
             <img src="/Images/logo.png" alt="" />
         </div>
         <div className={`${style.links} ${showNavlinks === true && style.active}`}>
-            <span><FaAngleLeft onClick={removeLinksHandler} /> Back</span>
+            <span onClick={removeLinksHandler}><FaAngleLeft/> Back</span>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/collection">Collection</Link></li>
@@ -27,7 +27,7 @@ export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks
         <div className="icons" style={{display:'flex',alignItems:'center'}}>
             <IoSearch style={{fontSize:'23px',marginRight:'.8rem'}} />
             <FaUser style={{fontSize:'23px',marginRight:'.8rem'}}  />
-            <LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}}  />
+            <LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}} />
             <HiOutlineBars3BottomRight onClick={NavLinksHandler} className={style.bars} />
         </div>
     </header>

@@ -5,11 +5,11 @@ import { collectionProduct } from '../../../../productData';
 import {
   Link
 } from "react-router-dom";
-export default function CollectionPage() {
+export default function CollectionPage({showFilterBox, showFilter}) {
   return (
     <div className={style.pageContainer}>
       <div className={style.sideBar}>
-        <Sidebar />
+        <Sidebar showFilter = {showFilter} showFilterBox = {showFilterBox} />
       </div>
       <div className={style.product}>
         <div>
