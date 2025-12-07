@@ -2,6 +2,9 @@ import Item from '../../HomePage/BestSeller/Item';
 import style from '../Header/CollectionPage.module.css';
 import Sidebar from '../Sidebar/Sidebar';
 import { collectionProduct } from '../../../../productData';
+import {
+  Link
+} from "react-router-dom";
 export default function CollectionPage() {
   return (
     <div className={style.pageContainer}>
@@ -21,7 +24,7 @@ export default function CollectionPage() {
         </div>
         <div className={style.productsData}>
           {collectionProduct.map((item, index) => {
-            return <Item key={index} img={item.img} title={item.title} price={item.price} />
+            return <Link to="/productDetail"><Item key={index} img={item.img} title={item.title} price={item.price} /></Link>
           })}
         </div>
       </div>

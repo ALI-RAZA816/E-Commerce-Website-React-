@@ -13,6 +13,7 @@ import {
   Route,
 } from "react-router-dom";
 import CollectionPage from './Component/CollectionPage/Header/CollectionPage';
+import ProductPageDetail from './Component/ProductDetail/ProductPageDetail';
 
 function App() {
 
@@ -26,18 +27,21 @@ function App() {
         <Router>
           <Header removeLinksHandler={removeLinksHandler} showNavlinks={showNavlinks} NavLinksHandler={NavLinksHandler} />
           <Switch>
-            <Route exact path='/'>
-              <HeroSection />
-              <main>
+            <main>
+              <Route exact path='/'>
+                <HeroSection />
                 <Collection />
                 <BestSeller />
                 <Support />
                 <Subscription />
-              </main>
-            </Route>
-            <Route exact path='/collection'>
-              <CollectionPage/>
-            </Route>
+              </Route>
+              <Route exact path='/collection'>
+                <CollectionPage />
+              </Route>
+              <Route exact path='/productDetail'>
+                <ProductPageDetail/>
+              </Route>
+            </main>
           </Switch>
           <footer>
             <Footer />
