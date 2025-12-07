@@ -102,3 +102,28 @@
     font-size: 16px;
     margin-bottom: .5rem;
 }
+
+
+@media screen and (max-width:992px) {
+    .left{
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .relatedimages{
+        display: flex;
+        gap: 20px;
+    }
+}
+@media screen and (max-width:740px) {
+  .imageGrid{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width:440px) {
+  .sizesNumber span{
+    height: 40px;
+    width: 42px;
+    line-height: 40px;
+  }
+}
