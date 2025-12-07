@@ -1,10 +1,11 @@
-import Item from '../../HomePage/BestSeller/Item';
 import style from '../Header/CollectionPage.module.css';
 import Sidebar from '../Sidebar/Sidebar';
+import Item from '../../HomePage/Collection/Item';
 import { collectionProduct } from '../../../../productData';
 import {
   Link
 } from "react-router-dom";
+
 export default function CollectionPage({showFilterBox, showFilter}) {
   return (
     <div className={style.pageContainer}>
@@ -18,13 +19,13 @@ export default function CollectionPage({showFilterBox, showFilter}) {
             <select name="" id="">
               <option value="relevant">Sort by: Relevant</option>
               <option value="low to high">Sort by: Low to High</option>
-              <option value="high to low">Sort by: Hight to Low</option>
+              <option  value="high to low">Sort by: Hight to Low</option>
             </select>
           </div>
         </div>
         <div className={style.productsData}>
           {collectionProduct.map((item, index) => {
-            return <Link to="/productDetail"><Item key={index} img={item.img} title={item.title} price={item.price} /></Link>
+            return <Link style={{textDecoration:'none'}} to="/productDetail"><Item key={index} img={item.img} title={item.title} price={item.price} /></Link>
           })}
         </div>
       </div>

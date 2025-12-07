@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 export default function Item({ img, title, price }) {
   return (
-    <Link to="/productDetail"><div className={style.card}>
+    <Link className ={style.link} to="/productDetail"><div className={style.card}>
       <div className={style.img}>
         <img src={img} alt="" />
       </div>

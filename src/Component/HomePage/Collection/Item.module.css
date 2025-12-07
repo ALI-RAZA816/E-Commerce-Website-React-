@@ -5,6 +5,10 @@
     text-align: left !important;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .card:hover img{
     transform: scale(1.1);
 }
