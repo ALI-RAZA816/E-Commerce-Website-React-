@@ -1,0 +1,104 @@
+.imageGrid{
+    display: grid;
+    gap: 50px;
+    margin: 2rem 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left{
+    gap: 20px;
+    align-items: flex-start;
+    display: flex;
+}
+
+.relatedimages div{
+    max-width: 138px;
+    margin-bottom: 1rem;
+}
+
+.relatedimages div img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.productImage{
+    width: 100%;
+    max-width: 591px;
+    height: auto;
+}
+
+.productImage img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.right > h1{
+    margin:1.3rem 0;
+    font-size: 34px;
+    font-weight: normal;
+    color: #3D3D3D;
+}
+
+.price h1{
+    font-size: 32px;
+    font-weight: normal;
+    color: #2A2A2A;
+    margin: 1rem 0;
+}
+
+.price p{
+    font-size: 16px;
+    margin-bottom: 1rem;
+    color: #555555;
+}
+
+.size{
+    margin: 1.5rem 0;
+}
+
+.size > h3{
+    color: #656565;
+    font-size: 20px;
+    margin: 1rem 0;
+}
+
+.sizesNumber{
+    display: flex;
+}
+
+.sizesNumber span{
+    display: block;
+    height: 61px;
+    width: 62px;
+    text-align: center;
+    line-height: 61px;
+    color: #1D1D1D;
+    font-size: 16px;
+    margin-right: 1rem;
+    cursor: pointer;
+    border: 1px solid #EBEBEB;
+    background-color: #FBFBFB;
+}
+
+.size button{
+    height:60px;
+    width:204px;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.right ul li{
+    list-style-type: none;
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: .5rem;
+}
