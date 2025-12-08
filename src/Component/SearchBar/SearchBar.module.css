@@ -14,9 +14,9 @@
 }
 
 .active{
-    opacity: 1;
-    visibility: visible;
-    height: 80px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: 80px !important;
 }
 
 .field{

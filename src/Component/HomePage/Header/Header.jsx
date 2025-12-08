@@ -16,6 +16,7 @@ export default function Header() {
   const {NavLinksHandler} = useContext(contextProvider);
   const {removeLinksHandler} = useContext(contextProvider);
   const {showNavlinks} = useContext(contextProvider);
+  const {showSearchBar} = useContext(contextProvider);
 
   return (
     <header className={style.header}>
@@ -32,7 +33,7 @@ export default function Header() {
             </ul>
         </div>
         <div className="icons" style={{display:'flex',alignItems:'center'}}>
-            <IoSearch style={{fontSize:'23px',marginRight:'.8rem'}} />
+            <IoSearch onClick={showSearchBar} style={{fontSize:'23px',marginRight:'.8rem',cursor:'pointer'}} />
             <FaUser style={{fontSize:'23px',marginRight:'.8rem'}}  />
             <Link style={{color:'#333'}}  to="/cart"><LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}} /></Link>
             <HiOutlineBars3BottomRight onClick={NavLinksHandler} className={style.bars} />

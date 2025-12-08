@@ -21,15 +21,18 @@ import Contact from './Component/ContactPage/Contact';
 import SearchBar from './Component/SearchBar/SearchBar';
 import contextProvider from './assets/ContextProvider/ContextStore';
 
-
 function App() {
 
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
+  const [search, setSearch] = useState(false);
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
   const showFilterBox = () => setShowFilter(!showFilter);
-
+  const showSearchBar = () => {
+    setSearch(true);
+  };
+  const hideSearchBar = () => setSearch(false);
   return (
     <div>
       <div className='container'>
@@ -38,48 +41,51 @@ function App() {
           showNavlinks,
           NavLinksHandler,
           showFilter,
-          showFilterBox
+          showFilterBox,
+          search,
+          showSearchBar,
+          hideSearchBar
         }}>
-        <Router>
-          <Header removeLinksHandler={removeLinksHandler} showNavlinks={showNavlinks} NavLinksHandler={NavLinksHandler} />
-          <SearchBar />
-          <Switch>
-            <main>
-              <Route exact path='/'>
-                <HeroSection />
-                <Collection />
-                <BestSeller />
-                <Support />
-                <Subscription />
-              </Route>
-              <Route exact path='/collection'>
-                <CollectionPage showFilter={showFilter} showFilterBox={showFilterBox} />
-              </Route>
-              <Route exact path='/about'>
-                <About />
-              </Route>
-              <Route exact path='/contact'>
-                <Contact />
-              </Route>
-              <Route exact path='/productDetail'>
-                <ProductPageDetail />
-              </Route>
-              <Route exact path='/cart'>
-                <Cart />
-              </Route>
-              <Route exact path='/delivery'>
-                <Delivery />
-              </Route>
-            </main>
-          </Switch>
-          <footer>
-            <Footer />
-          </footer>
-        </Router>
+          <Router>
+            <Header />
+            <SearchBar />
+            <Switch>
+              <main>
+                <Route exact path='/'>
+                  <HeroSection />
+                  <Collection />
+                  <BestSeller />
+                  <Support />
+                  <Subscription />
+                </Route>
+                <Route exact path='/collection'>
+                  <CollectionPage />
+                </Route>
+                <Route exact path='/about'>
+                  <About />
+                </Route>
+                <Route exact path='/contact'>
+                  <Contact />
+                </Route>
+                <Route exact path='/productDetail'>
+                  <ProductPageDetail />
+                </Route>
+                <Route exact path='/cart'>
+                  <Cart />
+                </Route>
+                <Route exact path='/delivery'>
+                  <Delivery />
+                </Route>
+              </main>
+            </Switch>
+            <footer>
+              <Footer />
+            </footer>
+          </Router>
         </contextProvider.Provider >
       </div>
     </div>
-    
+
   )
 }
 
