@@ -15,6 +15,7 @@ import {
 import CollectionPage from './Component/CollectionPage/Header/CollectionPage';
 import ProductPageDetail from './Component/ProductDetail/ProductPageDetail';
 import Cart from './Component/Cart/Cart';
+import Delivery from './Component/DeliveryPage/Delivery';
 
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
               </Route>
               <Route exact path='/cart'>
                 <Cart/>
+              </Route>
+              <Route exact path='/delivery'>
+                <Delivery/>
               </Route>
             </main>
           </Switch>
