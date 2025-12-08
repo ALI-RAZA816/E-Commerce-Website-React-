@@ -7,9 +7,16 @@ import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import {
   Link
 } from "react-router-dom";
+import { useContext } from "react";
+import contextProvider from "../../../assets/ContextProvider/ContextStore";
+
+export default function Header() {
 
 
-export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks}) {
+  const {NavLinksHandler} = useContext(contextProvider);
+  const {removeLinksHandler} = useContext(contextProvider);
+  const {showNavlinks} = useContext(contextProvider);
+
   return (
     <header className={style.header}>
         <div className={style.logo}>

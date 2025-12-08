@@ -18,6 +18,8 @@ import Cart from './Component/Cart/Cart';
 import Delivery from './Component/DeliveryPage/Delivery';
 import About from './Component/AboutPage/About';
 import Contact from './Component/ContactPage/Contact';
+import SearchBar from './Component/SearchBar/SearchBar';
+import contextProvider from './assets/ContextProvider/ContextStore';
 
 
 function App() {
@@ -31,8 +33,16 @@ function App() {
   return (
     <div>
       <div className='container'>
+        <contextProvider.Provider value={{
+          removeLinksHandler,
+          showNavlinks,
+          NavLinksHandler,
+          showFilter,
+          showFilterBox
+        }}>
         <Router>
           <Header removeLinksHandler={removeLinksHandler} showNavlinks={showNavlinks} NavLinksHandler={NavLinksHandler} />
+          <SearchBar />
           <Switch>
             <main>
               <Route exact path='/'>
@@ -43,22 +53,22 @@ function App() {
                 <Subscription />
               </Route>
               <Route exact path='/collection'>
-                <CollectionPage showFilter = {showFilter} showFilterBox = {showFilterBox} />
+                <CollectionPage showFilter={showFilter} showFilterBox={showFilterBox} />
               </Route>
               <Route exact path='/about'>
-                <About/>
+                <About />
               </Route>
               <Route exact path='/contact'>
-                <Contact/>
+                <Contact />
               </Route>
               <Route exact path='/productDetail'>
-                <ProductPageDetail/>
+                <ProductPageDetail />
               </Route>
               <Route exact path='/cart'>
-                <Cart/>
+                <Cart />
               </Route>
               <Route exact path='/delivery'>
-                <Delivery/>
+                <Delivery />
               </Route>
             </main>
           </Switch>
@@ -66,8 +76,10 @@ function App() {
             <Footer />
           </footer>
         </Router>
+        </contextProvider.Provider >
       </div>
     </div>
+    
   )
 }
 

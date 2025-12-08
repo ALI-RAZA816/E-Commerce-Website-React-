@@ -5,8 +5,14 @@ import { collectionProduct } from '../../../../productData';
 import {
   Link
 } from "react-router-dom";
+import { useContext } from 'react';
+import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
-export default function CollectionPage({showFilterBox, showFilter}) {
+export default function CollectionPage() {
+
+  const {showFilterBox} = useContext(contextProvider);
+  const {showFilter} = useContext(contextProvider);
+
   return (
     <div className={style.pageContainer}>
       <div className={style.sideBar}>
