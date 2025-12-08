@@ -20,8 +20,8 @@ export default function Header({NavLinksHandler,removeLinksHandler, showNavlinks
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/collection">Collection</Link></li>
-                <li><Link to="/">About</Link></li>
-                <li><Link to="/">Contact</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/collection">Contact</Link></li>
             </ul>
         </div>
         <div className="icons" style={{display:'flex',alignItems:'center'}}>

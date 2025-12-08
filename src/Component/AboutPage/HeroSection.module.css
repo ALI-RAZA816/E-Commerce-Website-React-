@@ -1,0 +1,26 @@
+.gridBox{
+    display: grid;
+    gap: 80px;
+    align-items: center;
+    grid-template-columns:1fr 1.3fr;
+}
+
+.gridBox img{
+    width: 100%;
+}
+
+.content p{
+    font-size: 18px;
+    color: #6D6D6D;
+}
+
+.content span{
+
+    font-weight: 550;
+}
+
+@media screen and (max-width:764px) {
+    .gridBox{
+        grid-template-columns:1fr;
+    }
+}
