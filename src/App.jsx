@@ -17,6 +17,7 @@ import ProductPageDetail from './Component/ProductDetail/ProductPageDetail';
 import Cart from './Component/Cart/Cart';
 import Delivery from './Component/DeliveryPage/Delivery';
 import About from './Component/AboutPage/About';
+import Contact from './Component/ContactPage/Contact';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
               </Route>
               <Route exact path='/about'>
                 <About/>
+              </Route>
+              <Route exact path='/contact'>
+                <Contact/>
               </Route>
               <Route exact path='/productDetail'>
                 <ProductPageDetail/>

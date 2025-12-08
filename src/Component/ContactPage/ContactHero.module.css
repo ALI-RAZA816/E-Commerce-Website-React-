@@ -1,0 +1,47 @@
+.contactHero{
+    display: grid;
+    margin: 0 auto;
+    gap: 50px;
+    margin-top: 3rem !important;
+    max-width: 1200px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contactHero img{
+    width: 100%;
+}
+
+.contactHero div h1{
+    color: #4E4E4E;
+    font-size: 24px;
+    font-weight: 550;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.contactHero div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactHero span{
+    color: #6D6D6D;
+    font-size: 18px;
+}
+
+.contactHero button{
+    height: 40px;
+    border: 1px solid #6D6D6D;
+    width: 135px;
+    margin: 2rem 0;
+    background: none;
+    cursor: pointer;
+    color: #303030;
+    font-size: 16px;
+}
+
+@media screen and (max-width:764px){
+    .contactHero{
+        grid-template-columns: 1fr;
+    }
+}
