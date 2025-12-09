@@ -17,7 +17,6 @@ export default function FetchItem() {
         fetch("http://localhost:8080/items",{signal})
         .then((res) => res.json())
         .then(({ items }) => {
-            console.log(items);
             dispatch(fetchActions.initialFetch());
             dispatch(HomeActions.addInitialItems(items[0]));
             dispatch(bestActions.bestSellers(items[1]));

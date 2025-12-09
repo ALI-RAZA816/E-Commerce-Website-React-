@@ -1,11 +1,11 @@
+
 import style from '../Collection/ProductsGrid.module.css';
 import Item from './Item';
-import { useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
 
 export default function ProductsContainer() {
 
   const homeProducts = useSelector((store) => store.homeProducts);
-
   return (
     <div className={style.ProductsContainer}>
       <div className={style.productGrid}>

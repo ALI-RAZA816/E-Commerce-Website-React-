@@ -6,7 +6,7 @@ const HomeSlice = createSlice({
     reducers:{
         addInitialItems:(state,action) =>{
             return action.payload;
-        }
+        },
     }
 });
 
