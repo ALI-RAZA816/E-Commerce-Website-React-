@@ -14,5 +14,5 @@ export default function ProductsContainer() {
         })}
       </div>
     </div>
-  )
+  );
 }

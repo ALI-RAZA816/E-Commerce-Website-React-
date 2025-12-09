@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchActions } from '../../Store/fetchItem';
 import { HomeActions } from '../../Store/HomeItems';
 import { bestActions } from '../../Store/bestSellers';
+import { collectionActions } from '../../Store/collection';
 export default function FetchItem() {
 
     const intialFetch = useSelector(store => store.intialFetch);
@@ -20,6 +21,7 @@ export default function FetchItem() {
             dispatch(fetchActions.initialFetch());
             dispatch(HomeActions.addInitialItems(items[0]));
             dispatch(bestActions.bestSellers(items[1]));
+            dispatch(collectionActions.addItems(items[2]));
             dispatch(fetchActions.fetchEnd());
         });
         return () => {
