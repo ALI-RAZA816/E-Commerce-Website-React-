@@ -1,7 +1,14 @@
 import style from '../Collection/ProductsGrid.module.css';
 import Item from './Item';
-import { collectionProduct } from '../../../../productData';
+import { useSelector } from 'react-redux';
+
+
+
+
 export default function ProductsContainer() {
+
+  const collectionProduct = useSelector(store => store.Items);
+  console.log(collectionProduct);
 
   return (
     <div className={style.ProductsContainer}>

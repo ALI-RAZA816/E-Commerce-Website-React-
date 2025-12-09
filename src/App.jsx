@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import BestSeller from './Component/HomePage/BestSeller/BestSeller';
 import Collection from './Component/HomePage/Collection/Collection';
@@ -20,6 +20,7 @@ import About from './Component/AboutPage/About';
 import Contact from './Component/ContactPage/Contact';
 import SearchBar from './Component/SearchBar/SearchBar';
 import contextProvider from './assets/ContextProvider/ContextStore';
+import FetchItem from './Component/FetchItem/FetchItem';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Switch>
               <main>
                 <Route exact path='/'>
+                  <FetchItem />
                   <HeroSection />
                   <Collection />
                   <BestSeller />
