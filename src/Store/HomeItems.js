@@ -4,8 +4,8 @@ const HomeSlice = createSlice({
     name:'homeSlice',
     initialState :[],
     reducers:{
-        addInitialItems:(action) =>{
-            return action.payload
+        addInitialItems:(state,action) =>{
+            return action.payload;
         }
     }
 });

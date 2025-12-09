@@ -4,7 +4,7 @@ import HomeSlice from "./HomeItems";
 const mainStore = configureStore({
     reducer:{
         intialFetch:fetchSlice.reducer,
-        Items:HomeSlice.reducer
+        homeProducts:HomeSlice.reducer
     }
 });
 
