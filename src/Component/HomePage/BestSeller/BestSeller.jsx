@@ -1,6 +1,7 @@
 
 import style from './BestSeller.module.css';
 import Item from '../Collection/Item'
+import { useSelector } from 'react-redux';
 export default function BestSeller() {
      const collectionProduct = [
         {
@@ -29,12 +30,15 @@ export default function BestSeller() {
             price:'26'
         },
      ]
+     
+
+    const bestSellers = useSelector((store) => store.bestSellers);
     return (
         <div className={style.BestSeller}>
             <h1>Best <span>Seller</span></h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
             <div className={style.products}>
-                {collectionProduct.map((item, index) =>{
+                {bestSellers.map((item, index) =>{
                     return <Item key = {index} img = {item.img} title = {item.title} price = {item.price}/> 
                 })}
             </div>

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchActions } from '../../Store/fetchItem';
 import { HomeActions } from '../../Store/HomeItems';
+import { bestActions } from '../../Store/bestSellers';
 export default function FetchItem() {
 
     const intialFetch = useSelector(store => store.intialFetch);
@@ -16,8 +17,10 @@ export default function FetchItem() {
         fetch("http://localhost:8080/items",{signal})
         .then((res) => res.json())
         .then(({ items }) => {
+            console.log(items);
             dispatch(fetchActions.initialFetch());
-            dispatch(HomeActions.addInitialItems(items));
+            dispatch(HomeActions.addInitialItems(items[0]));
+            dispatch(bestActions.bestSellers(items[1]));
             dispatch(fetchActions.fetchEnd());
         });
         return () => {

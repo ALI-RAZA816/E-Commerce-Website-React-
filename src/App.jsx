@@ -21,34 +21,10 @@ import Contact from './Component/ContactPage/Contact';
 import SearchBar from './Component/SearchBar/SearchBar';
 import contextProvider from './assets/ContextProvider/ContextStore';
 import FetchItem from './Component/FetchItem/FetchItem';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { fetchActions } from './Store/fetchItem';
-// import { HomeActions } from './Store/HomeItems';
+
 
 function App() {
-
-  // const intialFetch = useSelector(store => store.intialFetch);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-
-  //   if (intialFetch.fetchDone) return;
-  //   const controller = new AbortController();
-  //   const signal = controller.signal;
-  //   dispatch(fetchActions.fetchStart());
-  //   fetch("http://localhost:8080/items", { signal })
-  //     .then((res) => res.json())
-  //     .then(({ items }) => {
-  //       console.log(items[0]);
-  //       dispatch(fetchActions.initialFetch());
-  //       dispatch(HomeActions.addInitialItems(items[0]));
-  //       dispatch(fetchActions.fetchEnd());
-  //     });
-  //   return () => {
-  //     controller.abort();
-  //   }
-  // }, [intialFetch]);
-
+  
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState(false);
