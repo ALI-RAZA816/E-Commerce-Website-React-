@@ -8,6 +8,7 @@ import {
 import { useContext } from 'react';
 import contextProvider from '../../../assets/ContextProvider/ContextStore';
 import { useSelector } from 'react-redux';
+import Loader from '../../Loader/Loader';
 
 export default function CollectionPage() {
 
@@ -15,6 +16,7 @@ export default function CollectionPage() {
   const {showFilter} = useContext(contextProvider);
 
   const products = useSelector((store) => store.collection);
+  const initialFetch = useSelector((store) => store.intialFetch);
 
   return (
     <div className={style.pageContainer}>
@@ -32,11 +34,11 @@ export default function CollectionPage() {
             </select>
           </div>
         </div>
-        <div className={style.productsData}>
+        {initialFetch.currentFetch === true ? <Loader/>:<div className={style.productsData}>
           {products.map((item, index) => {
             return <Link style={{textDecoration:'none'}} to="/productDetail"><Item key={index} img={item.img} title={item.title} price={item.price} /></Link>
           })}
-        </div>
+        </div>}
       </div>
     </div>
   )

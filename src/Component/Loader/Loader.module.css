@@ -1,0 +1,26 @@
+.loaderContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+
+.loader{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    border-top-color: transparent !important;
+    animation: loader 1s linear 0s infinite;
+}
+
+@keyframes loader {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
