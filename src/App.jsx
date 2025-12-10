@@ -33,9 +33,7 @@ function App() {
   const [Img, setImg] = useState(null);
   const [Price, setPrice] = useState(null);
   const [Title, setTitle] = useState(null);
-
-
-
+  
   //functions
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
