@@ -1,6 +1,7 @@
 import { IoStarSharp } from "react-icons/io5";
 import style from '../ProductDetail/TopSection.module.css';
 
+
 export default function TopSection() {
     return (
         <div>
