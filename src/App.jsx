@@ -24,15 +24,15 @@ import FetchItem from './Component/FetchItem/FetchItem';
 
 
 function App() {
-  
+
 
   //states
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState(false);
-  const[Img, setImg] = useState(null);
-  const[Price, setPrice] = useState(null);
-  const[Title, setTitle] = useState(null);
+  const [Img, setImg] = useState(null);
+  const [Price, setPrice] = useState(null);
+  const [Title, setTitle] = useState(null);
 
 
 
@@ -42,7 +42,7 @@ function App() {
   const showFilterBox = () => setShowFilter(!showFilter);
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
-  const imgHandler = (img,price,title) =>{
+  const imgHandler = (img, price, title) => {
     setImg(img);
     setPrice(title);
     setTitle(price);
@@ -71,38 +71,34 @@ function App() {
             <Header />
             <SearchBar />
             <Switch>
-              <main>
-                <Route exact path='/'>
-                  <FetchItem />
-                  <HeroSection />
-                  <Collection />
-                  <BestSeller />
-                  <Support />
-                  <Subscription />
-                </Route>
-                <Route exact path='/collection'>
-                  <CollectionPage />
-                </Route>
-                <Route exact path='/about'>
-                  <About />
-                </Route>
-                <Route exact path='/contact'>
-                  <Contact />
-                </Route>
-                <Route exact path='/productDetail'>
-                  <ProductPageDetail/>
-                </Route>
-                <Route exact path='/cart'>
-                  <Cart />
-                </Route>
-                <Route exact path='/delivery'>
-                  <Delivery />
-                </Route>
-              </main>
+              <Route exact path='/'>
+                <FetchItem />
+                <HeroSection />
+                <Collection />
+                <BestSeller />
+                <Support />
+                <Subscription />
+              </Route>
+              <Route exact path='/collection'>
+                <CollectionPage />
+              </Route>
+              <Route exact path='/about'>
+                <About />
+              </Route>
+              <Route exact path='/contact'>
+                <Contact />
+              </Route>
+              <Route exact path='/productDetail'>
+                <ProductPageDetail />
+              </Route>
+              <Route exact path='/cart'>
+                <Cart />
+              </Route>
+              <Route exact path='/delivery'>
+                <Delivery />
+              </Route>
             </Switch>
-            <footer>
-              <Footer />
-            </footer>
+            <Footer />
           </Router>
         </contextProvider.Provider >
       </div>

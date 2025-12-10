@@ -12,10 +12,10 @@ export default function FetchItem() {
     useEffect(() => {
 
         if(intialFetch.fetchDone) return;
-        const controller = new AbortController();
-        const signal = controller.signal;
+        // const controller = new AbortController();
+        // const signal = controller.signal;
         dispatch(fetchActions.fetchStart());
-        fetch("http://localhost:8080/items",{signal})
+        fetch("http://localhost:8080/items")
         .then((res) => res.json())
         .then(({ items }) => {
             dispatch(fetchActions.initialFetch());
@@ -24,9 +24,9 @@ export default function FetchItem() {
             dispatch(collectionActions.addItems(items[2]));
             dispatch(fetchActions.fetchEnd());
         });
-        return () => {
-            controller.abort();
-        }
+        // return () => {
+        //     controller.abort();
+        // }
     }, [intialFetch]);
 
     return (
