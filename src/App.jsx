@@ -25,16 +25,31 @@ import FetchItem from './Component/FetchItem/FetchItem';
 
 function App() {
   
+
+  //states
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState(false);
+  const[Img, setImg] = useState(null);
+  const[Price, setPrice] = useState(null);
+  const[Title, setTitle] = useState(null);
+
+
+
+  //functions
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
   const showFilterBox = () => setShowFilter(!showFilter);
-  const showSearchBar = () => {
-    setSearch(true);
-  };
+  const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
+  const imgHandler = (img,price,title) =>{
+    setImg(img);
+    setPrice(title);
+    setTitle(price);
+  }
+
+
+
   return (
     <div>
       <div className='container'>
@@ -46,7 +61,11 @@ function App() {
           showFilterBox,
           search,
           showSearchBar,
-          hideSearchBar
+          hideSearchBar,
+          imgHandler,
+          Img,
+          Price,
+          Title
         }}>
           <Router>
             <Header />
@@ -71,7 +90,7 @@ function App() {
                   <Contact />
                 </Route>
                 <Route exact path='/productDetail'>
-                  <ProductPageDetail />
+                  <ProductPageDetail/>
                 </Route>
                 <Route exact path='/cart'>
                   <Cart />
