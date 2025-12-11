@@ -19,7 +19,6 @@ export default function Sidebar({ showFilterBox, showFilter }) {
       return;
     }
   });
-  console.log(type);
   return (
     <div className={`${style.sidebar} ${showFilter === true && style.active}`}>
       <h1><BsFillFilterSquareFill onClick={showFilterBox} className={style.filterIcon} />Filters</h1>

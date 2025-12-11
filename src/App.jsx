@@ -7,11 +7,7 @@ import Header from './Component/HomePage/Header/Header';
 import HeroSection from './Component/HomePage/HeroSection/HeroSection';
 import Subscription from './Component/HomePage/Subscription/Subscription';
 import Support from './Component/HomePage/Support/Support';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch,Route} from "react-router-dom";
 import CollectionPage from './Component/CollectionPage/Header/CollectionPage';
 import ProductPageDetail from './Component/ProductDetail/ProductPageDetail';
 import Cart from './Component/Cart/Cart';
@@ -22,9 +18,7 @@ import SearchBar from './Component/SearchBar/SearchBar';
 import contextProvider from './assets/ContextProvider/ContextStore';
 import FetchItem from './Component/FetchItem/FetchItem';
 
-
 function App() {
-
 
   //states
   const [showNavlinks, setNavlinks] = useState(false);
@@ -33,7 +27,7 @@ function App() {
   const [Img, setImg] = useState(null);
   const [Price, setPrice] = useState(null);
   const [Title, setTitle] = useState(null);
-  
+ 
   //functions
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
@@ -45,9 +39,6 @@ function App() {
     setPrice(title);
     setTitle(price);
   }
-
-
-
   return (
     <div>
       <div className='container'>
@@ -63,7 +54,7 @@ function App() {
           imgHandler,
           Img,
           Price,
-          Title
+          Title,
         }}>
           <Router>
             <Header />
