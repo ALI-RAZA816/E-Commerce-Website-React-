@@ -5,8 +5,10 @@ import { useSelector } from 'react-redux';
 import Loader from '../../Loader/Loader';
 
 export default function BestSeller() {
-    const bestSellers = useSelector((store) => store.bestSellers);
     const initialFetch = useSelector((store) => store.intialFetch);
+    const products = useSelector((store) => store.homeProducts);
+
+    const bestSellers = products.slice(8,13);
     return (
         <div className={style.BestSeller}>
             <h1>Best <span>Seller</span></h1>

@@ -14,10 +14,9 @@ export default function CollectionPage() {
 
   const {showFilterBox} = useContext(contextProvider);
   const {showFilter} = useContext(contextProvider);
-
-  const products = useSelector((store) => store.collection);
   const initialFetch = useSelector((store) => store.intialFetch);
-
+  const products = useSelector((store) => store.homeProducts);
+  
   return (
     <div className={style.pageContainer}>
       <div className={style.sideBar}>
