@@ -41,8 +41,6 @@ function App() {
     setTitle(price);
     setId(id);
   }
-
-  // console.log(Id);
   return (
     <div>
       <div className='container'>

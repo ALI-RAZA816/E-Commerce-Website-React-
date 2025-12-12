@@ -13,13 +13,9 @@ export default function TopSection() {
     const {Price} = useContext(contextProvider);
     const {Title} = useContext(contextProvider);
     const {Id} = useContext(contextProvider);
-
     const ADDtoBag = ()=>{
         dispatch(bagActions.addToBag(Id));
     }
-
-    const bagItems = useSelector((store) => store.bagItems);
-    console.log(bagItems);
     return (
         <div>
             <div className={style.imageGrid}>
