@@ -2,6 +2,7 @@ import CartItem from "./CartItem";
 import style from '../Cart/Cart.module.css';
 import Summary from "./Summary";
 import { useSelector } from "react-redux";
+import CartEmpty from "../CartEmpty/CartEmpty";
 
 export default function Cart() {
     
@@ -14,11 +15,11 @@ export default function Cart() {
     })
     return (
         <div className={style.cart}>
-            <div className="items">
+            {bagItems.length === 0 ?<CartEmpty/>:<div className="items">
                 {finalItem.map(item =>{
                     return <CartItem title={item.title} id = {item.id} image={item.img} price={item.price}/>
                 }) }
-            </div>
+            </div>}
             <div>
                <Summary/>
             </div>

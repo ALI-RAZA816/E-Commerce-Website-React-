@@ -1,0 +1,11 @@
+.emptyStatus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.emptyStatus h1{
+    color:#343434;
+}
