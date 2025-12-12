@@ -16,7 +16,7 @@ export default function Cart() {
         <div className={style.cart}>
             <div className="items">
                 {finalItem.map(item =>{
-                    return <CartItem title={item.title} image={item.img} price={item.price}/>
+                    return <CartItem title={item.title} id = {item.id} image={item.img} price={item.price}/>
                 }) }
             </div>
             <div>

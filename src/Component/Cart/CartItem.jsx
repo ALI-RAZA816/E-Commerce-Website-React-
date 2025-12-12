@@ -1,6 +1,13 @@
+import { useDispatch } from 'react-redux';
 import style from '../Cart/CartItem.module.css';
 import { RiDeleteBinLine } from "react-icons/ri";
-export default function CartItem({title,price,image}) {
+import { bagActions } from '../../Store/bagItems';
+export default function CartItem({title,price,image,id}) {
+
+    const dispatch = useDispatch();
+    const removeItem = () =>{
+        dispatch(bagActions.removeFromBag(id));
+    }
     return (
         <div>
             <div className={style.cartProduct}>
@@ -17,7 +24,7 @@ export default function CartItem({title,price,image}) {
                 <div className={style.quantity}>
                     <input type="number" min={1} placeholder='1' />
                 </div>
-                <RiDeleteBinLine style={{ fontSize: '20px', cursor: 'pointer' }} />
+                <RiDeleteBinLine onClick={removeItem} style={{ fontSize: '20px', cursor: 'pointer' }} />
             </div>
         </div>
     )

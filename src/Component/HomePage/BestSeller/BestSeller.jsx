@@ -15,7 +15,7 @@ export default function BestSeller() {
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
             {initialFetch.currentFetch === true ? <Loader/>:<div className={style.products}>
                 {bestSellers.map((item, index) =>{
-                    return <Item key = {index} img = {item.img} title = {item.title} price = {item.price}/> 
+                    return <Item key = {index} id = {item.id} img = {item.img} title = {item.title} price = {item.price}/> 
                 })}
             </div>}
         </div>

@@ -6,6 +6,9 @@ const bagSlice = createSlice({
     reducers:{
         addToBag:(state,action) =>{
             state.push(action.payload);
+        },
+        removeFromBag:(state,action) => {
+            return state.filter(id => id !== action.payload);
         }
     }
 });
