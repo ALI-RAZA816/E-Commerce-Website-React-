@@ -17,6 +17,9 @@ export default function TopSection() {
     const ADDtoBag = ()=>{
         dispatch(bagActions.addToBag(Id));
     }
+
+    const bagItems = useSelector((store) => store.bagItems);
+    console.log(bagItems);
     return (
         <div>
             <div className={style.imageGrid}>

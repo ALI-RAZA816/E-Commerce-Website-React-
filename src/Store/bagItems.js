@@ -5,7 +5,7 @@ const bagSlice = createSlice({
     initialState:[],
     reducers:{
         addToBag:(state,action) =>{
-            return state.push(action.payload);
+            state.push(action.payload);
         }
     }
 });
