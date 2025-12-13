@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './App.css';
 import BestSeller from './Component/HomePage/BestSeller/BestSeller';
 import Collection from './Component/HomePage/Collection/Collection';
@@ -28,7 +28,8 @@ function App() {
   const [Price, setPrice] = useState(null);
   const [Title, setTitle] = useState(null);
   const [Id, setId] = useState(null);
- 
+  const [quantity, setQuantity] = useState(1);
+
   //functions
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
@@ -40,6 +41,10 @@ function App() {
     setPrice(title);
     setTitle(price);
     setId(id);
+  }
+
+  const quantityHandler = (event) =>{
+    setQuantity(Number(event.target.value));
   }
   return (
     <div>
@@ -57,7 +62,9 @@ function App() {
           Img,
           Price,
           Title,
-          Id
+          Id,
+          quantityHandler,
+          quantity
         }}>
           <Router>
             <Header />

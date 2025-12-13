@@ -1,9 +1,10 @@
 import { IoStarSharp } from "react-icons/io5";
 import style from '../ProductDetail/TopSection.module.css';
-import { useContext } from "react";
+import { useContext} from "react";
 import contextProvider from "../../assets/ContextProvider/ContextStore";
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../../Store/bagItems";
+
 
 
 export default function TopSection() {
@@ -13,7 +14,14 @@ export default function TopSection() {
     const {Price} = useContext(contextProvider);
     const {Title} = useContext(contextProvider);
     const {Id} = useContext(contextProvider);
+    const bagItems = useSelector((store) => store.bagItems);
+
+    
     const ADDtoBag = ()=>{
+        if(bagItems.includes(Id)){
+            alert("This item already exist");
+            return;
+        }
         dispatch(bagActions.addToBag(Id));
     }
     return (
