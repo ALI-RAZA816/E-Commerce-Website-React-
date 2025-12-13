@@ -8,6 +8,7 @@ export default function CartItem({title,price,image,id}) {
 
     const {quantityHandler} = useContext(contextProvider);
     const {quantity} = useContext(contextProvider);
+    const {productSize} = useContext(contextProvider);
     const dispatch = useDispatch();
     const removeItem = () =>{
         dispatch(bagActions.removeFromBag(id));

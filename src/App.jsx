@@ -64,7 +64,7 @@ function App() {
           Title,
           Id,
           quantityHandler,
-          quantity
+          quantity,
         }}>
           <Router>
             <Header />
