@@ -7,7 +7,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 149,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"02",
@@ -15,7 +16,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 40,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"03",
@@ -23,7 +25,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 40,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"04",
@@ -31,7 +34,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 46,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"05",
@@ -39,7 +43,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 26,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"06",
@@ -47,7 +52,8 @@
         "title": "Men Printed Plain Cotton Shirt",
         "price": 52,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"07",
@@ -55,7 +61,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 30,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"08",
@@ -63,7 +70,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 34,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"09",
@@ -71,7 +79,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 26,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"10",
@@ -79,7 +88,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 68,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"11",
@@ -87,7 +97,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 149,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"12",
@@ -95,7 +106,8 @@
         "title": "'Women Round Neck Cotton Top",
         "price": 40,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"13",
@@ -103,7 +115,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 40,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"14",
@@ -111,7 +124,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 46,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"15",
@@ -119,7 +133,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 26,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"16",
@@ -127,7 +142,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 40,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"17",
@@ -135,7 +151,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 40,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"18",
@@ -143,7 +160,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 35,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"19",
@@ -151,7 +169,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 26,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"20",
@@ -159,7 +178,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 30,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"21",
@@ -167,7 +187,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 55,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"22",
@@ -175,7 +196,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 25,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"23",
@@ -183,7 +205,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 68,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"24",
@@ -191,7 +214,8 @@
         "title": "Girls Round Neck Pure Cotton T-shirt",
         "price": 12,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"25",
@@ -199,7 +223,8 @@
         "title": "Men Bottomwear Trousers",
         "price": 45,
         "category": "Men",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"26",
@@ -207,7 +232,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 46,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"27",
@@ -215,7 +241,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 26,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"28",
@@ -223,7 +250,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 149,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"29",
@@ -231,7 +259,8 @@
         "title": "Boy Round Neck Pure Cotton T-shirt",
         "price": 66,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"30",
@@ -239,7 +268,8 @@
         "title": "Men Bottomwear Trousers",
         "price": 95,
         "category": "Men",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"31",
@@ -247,7 +277,8 @@
         "title": "Girls Round Neck Pure Cotton T-shirt",
         "price": 13,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"32",
@@ -255,7 +286,8 @@
         "title": "Men Topered Fit Flat-Front Trousers",
         "price": 32,
         "category": "Men",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"33",
@@ -263,7 +295,8 @@
         "title": "Boy Round Neck Pure Cotton T-shirt",
         "price": 22,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"34",
@@ -271,7 +304,8 @@
         "title": "Boy Round Neck Pure Cotton T-shirt",
         "price": 66,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"35",
@@ -279,7 +313,8 @@
         "title": "Women Palazzo Pants with Waist Belt",
         "price": 76,
         "category": "Women",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"36",
@@ -287,7 +322,8 @@
         "title": "Women Zip-Front Relaxed Fit Jacket",
         "price": 56,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"37",
@@ -295,7 +331,8 @@
         "title": "Women Palazzo Pants with Waist Belt",
         "price": 92,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"38",
@@ -303,7 +340,8 @@
         "title": "Boy Round Neck Pure Cotton T-shirt",
         "price": 54,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"39",
@@ -311,7 +349,8 @@
         "title": "Boy Round Neck Pure Cotton T-shirt",
         "price": 88,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"40",
@@ -319,7 +358,8 @@
         "title": "Girls Round Neck Pure Cotton T-shirt",
         "price": 33,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"41",
@@ -327,7 +367,8 @@
         "title": "Women Zip-Front Relaxed Fit Jacket",
         "price": 11,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"42",
@@ -335,7 +376,8 @@
         "title": "Girls Round Neck Pure Cotton T-shirt",
         "price": 20,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"43",
@@ -343,7 +385,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 40,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"44",
@@ -351,7 +394,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 34,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"45",
@@ -359,7 +403,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 59,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"46",
@@ -367,7 +412,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 52,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"47",
@@ -375,7 +421,8 @@
         "title": "Women Round Neck Cotton Top",
         "price": 22,
         "category": "Women",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"48",
@@ -383,7 +430,8 @@
         "title": "Men Printed Plain Cotton Shirt",
         "price": 52,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"49",
@@ -391,7 +439,8 @@
         "title": "Men Slim Fit Relaxed Denim Jacket",
         "price": 19,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"50",
@@ -399,7 +448,8 @@
         "title": "Men Round Neck Pure Cotton T-shirt",
         "price": 16,
         "category": "Men",
-        "type": "Topwear"
+        "type": "Topwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"51",
@@ -407,7 +457,8 @@
         "title": "Kid Tapered Slim Fit Trouser",
         "price": 26,
         "category": "Kids",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"52",
@@ -415,7 +466,8 @@
         "title": "Women Zip-Front Relaxed Fit Jacket",
         "price": 69,
         "category": "Women",
-        "type": "Winterwear"
+        "type": "Winterwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"53",
@@ -423,7 +475,8 @@
         "title": "Men Slim Fit Relaxed Denim Jacket",
         "price": 59,
         "category": "Men",
-        "type": "Winterwear"
+        "type": "Winterwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"54",
@@ -431,7 +484,8 @@
         "title": "Kid Tapered Slim Fit Trouser",
         "price": 71,
         "category": "Kids",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"55",
@@ -439,7 +493,8 @@
         "title": "Men Slim Fit Relaxed Denim Jacket",
         "price": 11,
         "category": "Men",
-        "type": "Winterwear"
+        "type": "Winterwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"56",
@@ -447,7 +502,8 @@
         "title": "Kid Tapered Slim Fit Trouser",
         "price": 15,
         "category": "Kids",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"57",
@@ -455,7 +511,8 @@
         "title": "Kid Tapered Slim Fit Trouser",
         "price": 23,
         "category": "Kids",
-        "type": "Bottomwear"
+        "type": "Bottomwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"58",
@@ -463,7 +520,8 @@
         "title": "Women Zip-Front Relaxed Fit Jacket",
         "price": 10,
         "category": "Women",
-        "type": "Winterwear"
+        "type": "Winterwear",
+        "size":["S","M","X","XL","XXL"]
       },
       {
         "id":"59",
@@ -471,7 +529,8 @@
         "title": "Men Slim Fit Relaxed Denim Jacket",
         "price": 15,
         "category": "Men",
-        "type": "Winterwear"
+        "type": "Winterwear",
+        "size":["S","M","X","XL","XXL"]
       }
     ]
   ]

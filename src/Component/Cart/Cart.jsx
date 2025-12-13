@@ -17,8 +17,8 @@ export default function Cart() {
     });
 
     const SHIPPING_FEE = 10;
-    const itemsPrice = finalItem.reduce((acc ,curr) =>{
-        return acc + curr.price;
+    const itemsPrice = finalItem.reduce((items ,currentItem) =>{
+        return items + currentItem.price;
     },0);
 
     const itemstotal = itemsPrice * quantity
