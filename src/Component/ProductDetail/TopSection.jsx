@@ -15,7 +15,6 @@ export default function TopSection() {
     const {Title} = useContext(contextProvider);
     const {Id} = useContext(contextProvider);
     const bagItems = useSelector((store) => store.bagItems);
-
     
     const ADDtoBag = ()=>{
         if(bagItems.includes(Id)){

@@ -28,7 +28,7 @@ export default function Cart() {
     return (
         <div className={style.cart}>
             {bagItems.length === 0 ?<CartEmpty/>:<div className="items">
-                {finalItem.map(item =>{
+                {finalItem.map((item, index) =>{
                     return <CartItem title={item.title} id = {item.id} image={item.img} price={item.price}/>
                 }) }
             </div>}
