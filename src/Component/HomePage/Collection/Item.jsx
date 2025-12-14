@@ -5,10 +5,10 @@ import {
 } from "react-router-dom";
 import { useContext } from 'react';
 import contextProvider from '../../../assets/ContextProvider/ContextStore';
-export default function Item({img, title, price,id}) {
+export default function Item({img, title, price,id ,index}) {
   const {imgHandler} = useContext(contextProvider);
   return (
-    <Link onClick={() => imgHandler(img,title,price,id)} className ={style.link} to="/productDetail"><div className={style.card}>
+    <Link onClick={() => imgHandler(img,title,price,id,index)} className ={style.link} to="/productDetail"><div className={style.card}>
       <div className={style.img}>
         <img src={img} alt="" />
       </div>

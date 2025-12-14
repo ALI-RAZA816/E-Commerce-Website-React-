@@ -28,6 +28,7 @@ function App() {
   const [Price, setPrice] = useState(null);
   const [Title, setTitle] = useState(null);
   const [Id, setId] = useState(null);
+  const [ItemIndex, setItemIndex] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
   //functions
@@ -36,11 +37,12 @@ function App() {
   const showFilterBox = () => setShowFilter(!showFilter);
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
-  const imgHandler = (img, price, title,id) => {
+  const imgHandler = (img, price, title,id,index) => {
     setImg(img);
     setPrice(title);
     setTitle(price);
     setId(id);
+    setItemIndex(index);
   }
 
   const quantityHandler = (event) =>{
@@ -64,7 +66,8 @@ function App() {
           Title,
           Id,
           quantityHandler,
-          quantity,
+          ItemIndex,
+          quantity
         }}>
           <Router>
             <Header />

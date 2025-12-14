@@ -4,14 +4,11 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { bagActions } from '../../Store/bagItems';
 import { useContext } from 'react';
 import contextProvider from '../../assets/ContextProvider/ContextStore';
-export default function CartItem({title,price,image,id}) {
+export default function CartItem({title,price,image}) {
 
-    const {quantityHandler} = useContext(contextProvider);
     const {quantity} = useContext(contextProvider);
-    const dispatch = useDispatch();
-    const removeItem = () =>{
-        dispatch(bagActions.removeFromBag(id));
-    }
+    const {quantityHandler} = useContext(contextProvider);
+    
     return (
         <div>
             <div className={style.cartProduct}>
@@ -26,9 +23,9 @@ export default function CartItem({title,price,image,id}) {
                     </div>
                 </div>
                 <div className={style.quantity}>
-                    <input type="number" value={quantity} onChange={quantityHandler} min={1} placeholder='1' />
+                    <input type="number" min={1} value={quantity} onChange={quantityHandler} placeholder='1' />
                 </div>
-                <RiDeleteBinLine onClick={removeItem} style={{ fontSize: '20px', cursor: 'pointer' }} />
+                <RiDeleteBinLine style={{ fontSize: '20px', cursor: 'pointer' }} />
             </div>
         </div>
     )

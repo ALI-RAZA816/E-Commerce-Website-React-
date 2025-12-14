@@ -14,21 +14,20 @@ export default function TopSection() {
     const {Price} = useContext(contextProvider);
     const {Title} = useContext(contextProvider);
     const {Id} = useContext(contextProvider);
+    const {ItemIndex} = useContext(contextProvider);
     const bagItems = useSelector((store) => store.bagItems);
+    const homeProducts = useSelector((store) => store.homeProducts);
+    
     
     const ADDtoBag = ()=>{
-        if(bagItems.includes(Id)){
-            alert("This item already exist");
-            return;
-        }
-        dispatch(bagActions.addToBag(Id));
+        dispatch(bagActions.addToBag(homeProducts[ItemIndex]));
     }
     return (
         <div>
             <div className={style.imageGrid}>
                 <div className={style.left}>
                     <div className={style.relatedimages}>
-                        <div><img src={Img} alt="" /></div>
+                        <div><img src={Img} alt="" /></div> 
                         <div><img src={Img} alt="" /></div>
                         <div><img src={Img} alt="" /></div>
                         <div><img src={Img} alt="" /></div>
