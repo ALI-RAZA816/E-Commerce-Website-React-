@@ -89,6 +89,10 @@
     border-color: orange;
 }
 
+.activeBorder{
+    border-color: orange !important;
+}
+
 .size button{
     height:60px;
     width:204px;

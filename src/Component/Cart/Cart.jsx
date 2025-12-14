@@ -10,7 +10,6 @@ export default function Cart() {
     const {quantity} = useContext(contextProvider);
     const homeProducts = useSelector((store) => store.homeProducts);
     const bagItems = useSelector((store) => store.bagItems);
-
     const finalItem = homeProducts.filter(item => {
         const itemIndex = bagItems.indexOf(item.id);
         return itemIndex >=0;
