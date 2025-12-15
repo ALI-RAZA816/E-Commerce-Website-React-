@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import style from '../Collection/Item.module.css';
 
 export default function Item({img, title, price}) {

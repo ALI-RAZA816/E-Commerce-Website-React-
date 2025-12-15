@@ -17,6 +17,7 @@ import Contact from './Component/ContactPage/Contact';
 import SearchBar from './Component/SearchBar/SearchBar';
 import contextProvider from './assets/ContextProvider/ContextStore';
 import FetchItem from './Component/FetchItem/FetchItem';
+import { useSelector } from 'react-redux';
 
 function App() {
 
@@ -24,10 +25,9 @@ function App() {
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState(false);
-  const [Img, setImg] = useState(null);
-  const [Price, setPrice] = useState(null);
-  const [Title, setTitle] = useState(null);
-  const [Id, setId] = useState(null);
+  const [title,setTitle] = useState(null);
+  const [price,setprice] = useState(null);
+  const [Image,setImage] = useState(null);
 
   //functions
   const NavLinksHandler = () => setNavlinks(true);
@@ -35,11 +35,10 @@ function App() {
   const showFilterBox = () => setShowFilter(!showFilter);
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
-  const imgHandler = (img, price, title,id) => {
-    setImg(img);
-    setPrice(title);
-    setTitle(price);
-    setId(id);
+  const productDetailHandler = (title,price,image) =>{
+    setTitle(title);
+    setprice(price);
+    setImage(image);
   }
   return (
     <div>
@@ -53,11 +52,10 @@ function App() {
           search,
           showSearchBar,
           hideSearchBar,
-          imgHandler,
-          Img,
-          Price,
-          Title,
-          Id
+          productDetailHandler,
+          title,
+          price,
+          Image
         }}>
           <Router>
             <Header />
