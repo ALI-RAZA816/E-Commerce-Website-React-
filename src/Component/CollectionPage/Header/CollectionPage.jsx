@@ -16,6 +16,7 @@ export default function CollectionPage() {
   const {showFilter} = useContext(contextProvider);
   const initialFetch = useSelector((store) => store.intialFetch);
   const products = useSelector((store) => store.homeProducts);
+  const {productDetailHandler} = useContext(contextProvider);
   
   return (
     <div className={style.pageContainer}>
@@ -35,7 +36,7 @@ export default function CollectionPage() {
         </div>
         {initialFetch.currentFetch === true ? <Loader/>:<div className={style.productsData}>
           {products.map((item, index) => {
-            return <Link key = {index} style={{textDecoration:'none'}} to="/productDetail"><Item  img = {item.img} title = {item.title} price = {item.price} /></Link>
+            return <Link onClick={()=> productDetailHandler(item.title,item.price,item.img)} key = {index} style={{textDecoration:'none'}} to="/productDetail"><Item  img = {item.img} title = {item.title} price = {item.price} /></Link>
           })}
         </div>}
       </div>
