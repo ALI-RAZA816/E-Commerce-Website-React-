@@ -13,7 +13,7 @@ export default function RelatedProducts() {
             <h1>Related <span>Products</span></h1>
             <div className={style.products}>
                 {collectionProduct.map((item, index) => {
-                    return <Link style={{textDecoration:'none'}} to="/productDetail"><Item key={index} id={item.id} img={item.img} title={item.title} price={item.price} /></Link>
+                    return <Link style={{textDecoration:'none'}} to="/productDetail"><Item key={index} img={item.img} title={item.title} price={item.price} /></Link>
                 })}
             </div>
         </div>

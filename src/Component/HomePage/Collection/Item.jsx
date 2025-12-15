@@ -1,19 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
 import style from '../Collection/Item.module.css';
 import {
   Link
 } from "react-router-dom";
-import { useContext } from 'react';
-import contextProvider from '../../../assets/ContextProvider/ContextStore';
-export default function Item({img, title, price,id ,index}) {
-  const {imgHandler} = useContext(contextProvider);
+
+export default function Item() {
+
   return (
-    <Link onClick={() => imgHandler(img,title,price,id,index)} className ={style.link} to="/productDetail"><div className={style.card}>
+    <Link className ={style.link} to="/productDetail"><div className={style.card}>
       <div className={style.img}>
-        <img src={img} alt="" />
+        <img src="/Images/collections/p_img3.png" alt="" />
       </div>
-      <p className={style.title}>{title}</p>
-      <span className={style.price}>$ {price}</span>
+      <p className={style.title}>Title</p>
+      <span className={style.price}>$ 40</span>
     </div>
     </Link>
   )

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import BestSeller from './Component/HomePage/BestSeller/BestSeller';
 import Collection from './Component/HomePage/Collection/Collection';
@@ -28,8 +28,6 @@ function App() {
   const [Price, setPrice] = useState(null);
   const [Title, setTitle] = useState(null);
   const [Id, setId] = useState(null);
-  const [ItemIndex, setItemIndex] = useState(null);
-  const [quantity, setQuantity] = useState(1);
 
   //functions
   const NavLinksHandler = () => setNavlinks(true);
@@ -37,16 +35,11 @@ function App() {
   const showFilterBox = () => setShowFilter(!showFilter);
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
-  const imgHandler = (img, price, title,id,index) => {
+  const imgHandler = (img, price, title,id) => {
     setImg(img);
     setPrice(title);
     setTitle(price);
     setId(id);
-    setItemIndex(index);
-  }
-
-  const quantityHandler = (event) =>{
-    setQuantity(Number(event.target.value));
   }
   return (
     <div>
@@ -64,10 +57,7 @@ function App() {
           Img,
           Price,
           Title,
-          Id,
-          quantityHandler,
-          ItemIndex,
-          quantity
+          Id
         }}>
           <Router>
             <Header />
