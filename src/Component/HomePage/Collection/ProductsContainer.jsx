@@ -14,7 +14,7 @@ export default function ProductsContainer() {
     <div className={style.ProductsContainer}>
       <div className={style.productGrid}>
         {products.map((item,index)=>{
-            return <Link onClick={()=> productDetailHandler(item.title,item.price,item.img)} style ={{textDecoration:'none'}} key={index} to="/productDetail"><Item img = {item.img} title = {item.title} price = {item.price} /></Link>
+            return <Link onClick={()=> productDetailHandler(item.title,item.price,item.img,index)} style ={{textDecoration:'none'}} key={index} to="/productDetail"><Item img = {item.img} title = {item.title} price = {item.price} /></Link>
         })}
       </div>
     </div>

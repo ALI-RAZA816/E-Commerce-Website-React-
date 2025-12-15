@@ -2,10 +2,18 @@ import { IoStarSharp } from "react-icons/io5";
 import style from '../ProductDetail/TopSection.module.css';
 import { useContext } from "react";
 import contextProvider from "../../assets/ContextProvider/ContextStore";
+import { useDispatch, useSelector } from "react-redux";
+import { bagActions } from "../../Store/bagSlice";
 
 export default function TopSection() {
     const {title,price,Image} = useContext(contextProvider);
-
+    const homeProducts = useSelector((store) => store.homeProducts);
+    const dispatch = useDispatch();
+    const {itemIndex} = useContext(contextProvider);
+    const addItemHandler = () =>{
+        const item = homeProducts[itemIndex]
+        dispatch(bagActions.addtoBagItems(item));
+    }
     return (
         <div>
             <div className={style.imageGrid}>
@@ -43,7 +51,7 @@ export default function TopSection() {
                             <span>XL</span> 
                             <span>XXL</span> 
                         </div>
-                        <button>Add to cart</button>
+                        <button onClick={addItemHandler}>Add to cart</button>
                     </div>
                     <ul>
                         <li>100% Original product.</li>

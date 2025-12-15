@@ -28,6 +28,7 @@ function App() {
   const [title,setTitle] = useState(null);
   const [price,setprice] = useState(null);
   const [Image,setImage] = useState(null);
+  const [itemIndex,setitemIndex] = useState(null);
 
   //functions
   const NavLinksHandler = () => setNavlinks(true);
@@ -35,11 +36,13 @@ function App() {
   const showFilterBox = () => setShowFilter(!showFilter);
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
-  const productDetailHandler = (title,price,image) =>{
+  const productDetailHandler = (title,price,image,index) =>{
     setTitle(title);
     setprice(price);
     setImage(image);
+    setitemIndex(index)
   }
+
   return (
     <div>
       <div className='container'>
@@ -55,7 +58,8 @@ function App() {
           productDetailHandler,
           title,
           price,
-          Image
+          Image,
+          itemIndex
         }}>
           <Router>
             <Header />
