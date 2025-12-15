@@ -45,11 +45,10 @@ export default function TopSection() {
                     <div className={style.size}>
                         <h3>Select Size</h3>
                         <div className={style.sizesNumber}>
-                            <span>S</span> 
-                            <span>M</span> 
-                            <span>X</span> 
-                            <span>XL</span> 
-                            <span>XXL</span> 
+                            <span>L</span>
+                            <span>L</span>
+                            <span>L</span>
+                            <span>L</span>
                         </div>
                         <button onClick={addItemHandler}>Add to cart</button>
                     </div>

@@ -30,6 +30,7 @@ function App() {
   const [Image,setImage] = useState(null);
   const [itemIndex,setitemIndex] = useState(null);
 
+
   //functions
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
@@ -42,6 +43,8 @@ function App() {
     setImage(image);
     setitemIndex(index)
   }
+
+
 
   return (
     <div>
@@ -59,7 +62,7 @@ function App() {
           title,
           price,
           Image,
-          itemIndex
+          itemIndex,
         }}>
           <Router>
             <Header />
