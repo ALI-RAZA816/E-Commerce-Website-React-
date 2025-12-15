@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import contextProvider from "../../../assets/ContextProvider/ContextStore";
+import { useSelector } from "react-redux";
 
 
 export default function Header() {
@@ -17,6 +18,7 @@ export default function Header() {
   const {removeLinksHandler} = useContext(contextProvider);
   const {showNavlinks} = useContext(contextProvider);
   const {showSearchBar} = useContext(contextProvider);
+  const bagItems = useSelector((store) => store.bagItems);
 
   return (
     <header className={style.header}>
@@ -35,7 +37,7 @@ export default function Header() {
         <div className="icons" style={{display:'flex',alignItems:'center'}}>
             <IoSearch onClick={showSearchBar} style={{fontSize:'23px',marginRight:'.8rem',cursor:'pointer'}} />
             <FaUser style={{fontSize:'23px',marginRight:'.8rem'}}  />
-            <Link style={{color:'#333',positon:'relative'}}  to="/cart"><span className={style.lengthNumber}>0</span><LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}} /></Link>
+            <Link style={{color:'#333',positon:'relative'}}  to="/cart"><span className={style.lengthNumber}>{bagItems.length}</span><LuShoppingCart style={{fontSize:'23px',marginRight:'.8rem'}} /></Link>
             <HiOutlineBars3BottomRight onClick={NavLinksHandler} className={style.bars} />
         </div>
     </header>

@@ -1,16 +1,16 @@
 import style from '../Cart/CartItem.module.css';
 import { RiDeleteBinLine } from "react-icons/ri";
 
-export default function CartItem() {
+export default function CartItem({item}) {
     return (
         <div>
             <div className={style.cartProduct}>
                 <div className={style.productDetail}>
-                    <img src='/Images/collections/p_img3.png' alt="" />
+                    <img src={item.img} alt="" />
                     <div>
-                        <p className='title'>Title</p>
+                        <p className='title'>{item.title}</p>
                         <div style={{ margin: '1rem 0' }}>
-                            <span className='price'>$40</span>
+                            <span className='price'>$ {item.price}</span>
                             <span className='size'>L</span>
                         </div>
                     </div>
