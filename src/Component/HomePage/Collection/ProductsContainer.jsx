@@ -12,7 +12,7 @@ export default function ProductsContainer() {
     <div className={style.ProductsContainer}>
       <div className={style.productGrid}>
         {products.map((item,index)=>{
-            return <Link to="/productDetail"><Item  key = {index} img = {item.img} title = {item.title} price = {item.price} /></Link>
+            return <Link key={index} to="/productDetail"><Item img = {item.img} title = {item.title} price = {item.price} /></Link>
         })}
       </div>
     </div>

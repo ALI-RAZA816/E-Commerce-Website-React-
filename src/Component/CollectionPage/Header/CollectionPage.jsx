@@ -35,7 +35,7 @@ export default function CollectionPage() {
         </div>
         {initialFetch.currentFetch === true ? <Loader/>:<div className={style.productsData}>
           {products.map((item, index) => {
-            return <Link style={{textDecoration:'none'}} to="/productDetail"><Item key = {index} img = {item.img} title = {item.title} price = {item.price} /></Link>
+            return <Link key = {index} style={{textDecoration:'none'}} to="/productDetail"><Item  img = {item.img} title = {item.title} price = {item.price} /></Link>
           })}
         </div>}
       </div>

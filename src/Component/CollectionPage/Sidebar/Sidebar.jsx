@@ -26,7 +26,7 @@ export default function Sidebar({ showFilterBox, showFilter }) {
       <div className={style.category} style={{ marginBottom: '1rem' }}>
         <h3>Categories</h3>
         {category.map(item => {
-          return <div>
+          return <div key = {item}>
             <input type="checkbox" id= {item} />
             <label htmlFor={item} >{item}</label>
           </div>
@@ -35,7 +35,7 @@ export default function Sidebar({ showFilterBox, showFilter }) {
       <div className={style.type}>
         <h3>Type</h3>
         {type.map(item => {
-          return <div>
+          return <div key = {item}>
             <input type="checkbox" id={item} />
             <label htmlFor={item}>{item}</label>
           </div>
