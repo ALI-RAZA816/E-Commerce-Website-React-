@@ -8,6 +8,7 @@ export default function TopSection() {
     const {title} = useContext(contextProvider);
     const {image} = useContext(contextProvider);
     const {price} = useContext(contextProvider);
+    const {sizes} = useContext(contextProvider);
 
     return (
         <div>
@@ -40,10 +41,9 @@ export default function TopSection() {
                     <div className={style.size}>
                         <h3>Select Size</h3>
                         <div className={style.sizesNumber}>
-                            <span>L</span>
-                            <span>L</span>
-                            <span>L</span>
-                            <span>L</span>
+                            {sizes?.map((item,index) =>{
+                                return <span key={index}>{item}</span>
+                            })}
                         </div>
                         <button>Add to cart</button>
                     </div>
