@@ -27,6 +27,7 @@ function App() {
   const [title,setTitle] = useState(null);
   const [price,setPrice] = useState(null);
   const [image,setImage] = useState(null);
+  const [sizes,setSizes] = useState(null);
  
 
   //functions
@@ -39,9 +40,11 @@ function App() {
     const productTitle = productsData[index].title
     const productImage = productsData[index].img
     const productPrice = productsData[index].price
+    const productSizes = productsData[index].size
     setTitle(productTitle);
     setPrice(productPrice);
     setImage(productImage);
+    setSizes(productSizes);
   }
   
   return (
@@ -60,7 +63,8 @@ function App() {
           productDetailHandler,
           title,
           price,
-          image
+          image,
+          sizes
         }}>
           <Router>
             <Header />
