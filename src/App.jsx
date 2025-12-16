@@ -16,6 +16,7 @@ import About from './Component/AboutPage/About';
 import Contact from './Component/ContactPage/Contact';
 import SearchBar from './Component/SearchBar/SearchBar';
 import contextProvider from './assets/ContextProvider/ContextStore';
+import {productsData} from '../items';
 
 function App() {
 
@@ -31,6 +32,8 @@ function App() {
   const showFilterBox = () => setShowFilter(!showFilter);
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
+  // console.log(productsData);
+  
   return (
     <div>
       <div className='container'>
@@ -43,6 +46,7 @@ function App() {
           search,
           showSearchBar,
           hideSearchBar,
+          productsData
         }}>
           <Router>
             <Header />
