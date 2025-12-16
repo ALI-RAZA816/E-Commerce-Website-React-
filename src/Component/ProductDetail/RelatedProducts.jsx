@@ -15,7 +15,7 @@ export default function RelatedProducts() {
             <h1>Related <span>Products</span></h1>
             <div className={style.products}>
                 {relatedProducts.map((item,index) =>{
-                    return <Link onClick = {() => productDetailHandler(index)} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} image = {item.img} price = {item.price}/></Link>
+                    return <Link key={index} onClick = {() => productDetailHandler(index)} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} image = {item.img} price = {item.price}/></Link>
                 })}
             </div>
         </div>

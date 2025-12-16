@@ -4,7 +4,7 @@ import { useContext } from "react";
 import contextProvider from "../../assets/ContextProvider/ContextStore";
 
 export default function TopSection() {
-    const {title, price, image,sizes} = useContext(contextProvider);
+    const {title, price, image,sizes,ADDTOCARTHandler} = useContext(contextProvider);
     return (
         <div>
             <div className={style.imageGrid}>
@@ -36,11 +36,11 @@ export default function TopSection() {
                     <div className={style.size}>
                         <h3>Select Size</h3>
                         <div className={style.sizesNumber}>
-                            {sizes.map((item,index)=>{
+                            {sizes?.map((item,index)=>{
                                 return <span key={index}>{item}</span>
                             })}
                         </div>
-                        <button>Add to cart</button>
+                        <button onClick={ADDTOCARTHandler}>Add to cart</button>
                     </div>
                     <ul>
                         <li>100% Original product.</li>

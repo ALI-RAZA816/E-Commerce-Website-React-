@@ -28,6 +28,8 @@ function App() {
   const [price,setPrice] = useState(null);
   const [image,setImage] = useState(null);
   const [sizes,setSizes] = useState(null);
+  const [itemIndex,setitemIndex] = useState(null);
+  const [cartItem, setcartItem] = useState([]);
  
 
   //functions
@@ -45,8 +47,16 @@ function App() {
     setPrice(productPrice);
     setImage(productImage);
     setSizes(productSizes);
+    setitemIndex(index);
   }
-  
+
+
+  const ADDTOCARTHandler = () =>{
+    // alert(itemIndex);
+    const item = productsData[itemIndex];
+    setcartItem([...cartItem,item]);
+  }
+
   return (
     <div>
       <div className='container'>
@@ -64,7 +74,9 @@ function App() {
           title,
           price,
           image,
-          sizes
+          sizes,
+          ADDTOCARTHandler,
+          cartItem
         }}>
           <Router>
             <Header />
