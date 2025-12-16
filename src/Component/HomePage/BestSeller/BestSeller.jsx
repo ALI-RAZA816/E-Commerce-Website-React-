@@ -7,6 +7,7 @@ import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
 export default function BestSeller() {
     const {productsData} = useContext(contextProvider);
+    const {productDetailHandler} = useContext(contextProvider);
       const BestSeller = productsData.slice(0,5);
     return (
         <div className={style.BestSeller}>
@@ -15,7 +16,7 @@ export default function BestSeller() {
             {/* <Loader/> */}
             <div className={style.products}>
                 {BestSeller.map((item,index) =>{
-                    return <Link key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} price={item.price} image = {item.img}/></Link>
+                    return <Link onClick = {() => productDetailHandler(index)} key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} price={item.price} image = {item.img}/></Link>
                 })}
             </div>
         </div>
