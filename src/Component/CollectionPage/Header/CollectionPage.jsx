@@ -14,9 +14,6 @@ export default function CollectionPage() {
 
   const {showFilterBox} = useContext(contextProvider);
   const {showFilter} = useContext(contextProvider);
-  const initialFetch = useSelector((store) => store.intialFetch);
-  const products = useSelector((store) => store.homeProducts);
-  const {detailHandler} = useContext(contextProvider);
   
   return (
     <div className={style.pageContainer}>
@@ -34,11 +31,10 @@ export default function CollectionPage() {
             </select>
           </div>
         </div>
-        {initialFetch.currentFetch === true ? <Loader/>:<div className={style.productsData}>
-          {products.map((item, index) => {
-            return <Link onClick={()=> detailHandler(index)} key = {index} style={{textDecoration:'none'}} to="/productDetail"><Item  img = {item.img} title = {item.title} price = {item.price} /></Link>
-          })}
-        </div>}
+       {/* <Loader/> */}
+       <div className={style.productsData}>
+           <Link style={{textDecoration:'none'}} to="/productDetail"><Item/></Link>
+        </div>
       </div>
     </div>
   )

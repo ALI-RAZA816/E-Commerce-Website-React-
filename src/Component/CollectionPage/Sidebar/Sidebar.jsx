@@ -1,45 +1,46 @@
-import { useSelector } from 'react-redux';
+
+import { useContext } from 'react';
+import contextProvider from '../../../assets/ContextProvider/ContextStore';
 import style from '../Sidebar/Sidebar.module.css';
 import { BsFillFilterSquareFill } from "react-icons/bs";
 
-export default function Sidebar({ showFilterBox, showFilter }) {
+export default function Sidebar() {
 
-  const products = useSelector((store) => store.homeProducts);
-  const category = [];
-  const type = [];
-  products.map(item => {
-    if (!category.includes(item.category)) {
-      category.push(item.category);
-      return;
-    }
-  });
-  products.map(item => {
-    if (!type.includes(item.type)) {
-      type.push(item.type);
-      return;
-    }
-  });
-
+  const {showFilterBox}= useContext(contextProvider);
+  const {showFilter}= useContext(contextProvider);
+  
   return (
     <div className={`${style.sidebar} ${showFilter === true && style.active}`}>
       <h1><BsFillFilterSquareFill onClick={showFilterBox} className={style.filterIcon} />Filters</h1>
       <div className={style.category} style={{ marginBottom: '1rem' }}>
         <h3>Categories</h3>
-        {category.map(item => {
-          return <div key = {item}>
-            <input type="checkbox" id= {item} />
-            <label htmlFor={item} >{item}</label>
+          <div>
+            <input type="checkbox" id= 'Women' />
+            <label htmlFor='Women' >Women</label>
           </div>
-        })}
+          <div>
+            <input type="checkbox" id= 'Women' />
+            <label htmlFor='Women' >Women</label>
+          </div>
+          <div>
+            <input type="checkbox" id= 'Women' />
+            <label htmlFor='Women' >Women</label>
+          </div>
       </div>
       <div className={style.type}>
         <h3>Type</h3>
-        {type.map(item => {
-          return <div key = {item}>
-            <input type="checkbox" id={item} />
-            <label htmlFor={item}>{item}</label>
-          </div>
-        })}
+        <div>
+            <input type="checkbox" id= 'topwear' />
+            <label htmlFor='topwear'>Topwear</label>
+        </div>
+        <div>
+            <input type="checkbox" id= 'topwear' />
+            <label htmlFor='topwear'>Topwear</label>
+        </div>
+        <div>
+            <input type="checkbox" id= 'topwear' />
+            <label htmlFor='topwear'>Topwear</label>
+        </div>
       </div>
     </div>
   )
