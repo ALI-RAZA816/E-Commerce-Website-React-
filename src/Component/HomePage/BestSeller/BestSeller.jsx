@@ -15,7 +15,7 @@ export default function BestSeller() {
             {/* <Loader/> */}
             <div className={style.products}>
                 {BestSeller.map((item,index) =>{
-                    return <Link style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} price={item.price} image = {item.img}/></Link>
+                    return <Link key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} price={item.price} image = {item.img}/></Link>
                 })}
             </div>
         </div>

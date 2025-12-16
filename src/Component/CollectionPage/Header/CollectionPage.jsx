@@ -7,13 +7,13 @@ import {
 } from "react-router-dom";
 import { useContext } from 'react';
 import contextProvider from '../../../assets/ContextProvider/ContextStore';
-import { useSelector } from 'react-redux';
-import Loader from '../../Loader/Loader';
+
 
 export default function CollectionPage() {
 
   const {showFilterBox} = useContext(contextProvider);
   const {showFilter} = useContext(contextProvider);
+  const {productsData} = useContext(contextProvider);
   
   return (
     <div className={style.pageContainer}>
@@ -33,7 +33,9 @@ export default function CollectionPage() {
         </div>
        {/* <Loader/> */}
        <div className={style.productsData}>
-           <Link style={{textDecoration:'none'}} to="/productDetail"><Item/></Link>
+           {productsData.map((item,index) => {
+            return <Link key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} image = {item.img} price = {item.price}/></Link>
+           })}
         </div>
       </div>
     </div>
