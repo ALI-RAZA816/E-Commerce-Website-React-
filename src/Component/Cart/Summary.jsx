@@ -1,26 +1,42 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import style from '../Cart/Summary.module.css';
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import PaymentMethod from './PaymentMethod';
+import contextProvider from '../../assets/ContextProvider/ContextStore';
 
 
 export default function Summary() {
     const location = useLocation();
+
+    const {cartItem} = useContext(contextProvider);
+
+    const subTotal = cartItem.reduce((item, currItem) =>{
+        return item + currItem.price;
+    },0);
+    
+    const quantity = cartItem.reduce((item, currItem) =>{
+        return item + currItem.quantity;
+    },0);
+
+    const SHIPPING_FEE = 10;
+    const itemPrice = subTotal * quantity
+    const totalPrice = itemPrice + SHIPPING_FEE;
+    
     return (
         <div className={style.summary}>
             <h1>Cart <span>Summary</span></h1>
             <div className="subtotal">
                 <span>Subtotal</span>
-                <span>$0.00</span>
+                <span>${itemPrice}.00</span>
             </div>
             <div className="shipping fee">
                 <span>Shipping Fee</span>
-                <span>$0.00</span>
+                <span>${SHIPPING_FEE}.00</span>
             </div>
             <div className="Total">
                 <span>Total</span>
-                <span>$0.00</span>
+                <span>${totalPrice}.00</span>
             </div>
             {location.pathname === '/delivery' && <PaymentMethod/>}
             {location.pathname === '/delivery' ?<Link style={{textDecoration:'none'}} to="/delivery"><button>Place Order</button></Link>:<Link style={{textDecoration:'none'}} to="/delivery"><button>Proceed to checkout</button></Link>}

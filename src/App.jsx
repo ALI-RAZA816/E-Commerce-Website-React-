@@ -28,6 +28,7 @@ function App() {
   const [price,setPrice] = useState(null);
   const [image,setImage] = useState(null);
   const [sizes,setSizes] = useState(null);
+  const [activeSize,setActiveSize] = useState(null);
   const [itemIndex,setitemIndex] = useState(null);
   const [cartItem, setcartItem] = useState([]);
  
@@ -50,11 +51,25 @@ function App() {
     setitemIndex(index);
   }
 
-
+  
   const ADDTOCARTHandler = () =>{
-    // alert(itemIndex);
+    if(activeSize === null){
+      alert('Please select item size');
+      return;
+    }
+
     const item = productsData[itemIndex];
     setcartItem([...cartItem,item]);
+    setActiveSize(null);
+  }
+  
+  const sizeHandler = (item) => {
+    setActiveSize(item);
+    productsData[itemIndex].productSize = item;
+  }
+
+  const quantityHandler = (event) => {
+    productsData[itemIndex].quantity = event.target.value;
   }
 
   return (
@@ -76,7 +91,10 @@ function App() {
           image,
           sizes,
           ADDTOCARTHandler,
-          cartItem
+          cartItem,
+          sizeHandler,
+          activeSize,
+          quantityHandler,
         }}>
           <Router>
             <Header />

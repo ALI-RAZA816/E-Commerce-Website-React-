@@ -4,7 +4,13 @@ import { useContext } from "react";
 import contextProvider from "../../assets/ContextProvider/ContextStore";
 
 export default function TopSection() {
-    const {title, price, image,sizes,ADDTOCARTHandler} = useContext(contextProvider);
+    const {title} = useContext(contextProvider);
+    const {price} = useContext(contextProvider);
+    const {image} = useContext(contextProvider);
+    const {sizes} = useContext(contextProvider);
+    const {activeSize} = useContext(contextProvider);
+    const {ADDTOCARTHandler} = useContext(contextProvider);
+    const {sizeHandler} = useContext(contextProvider);
     return (
         <div>
             <div className={style.imageGrid}>
@@ -37,7 +43,7 @@ export default function TopSection() {
                         <h3>Select Size</h3>
                         <div className={style.sizesNumber}>
                             {sizes?.map((item,index)=>{
-                                return <span key={index}>{item}</span>
+                                return <span key={index} className={activeSize === item ? style.activeBorder : undefined} onClick={() => sizeHandler(item)}>{item}</span>
                             })}
                         </div>
                         <button onClick={ADDTOCARTHandler}>Add to cart</button>

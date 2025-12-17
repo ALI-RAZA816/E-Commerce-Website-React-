@@ -13,7 +13,7 @@ export default function Cart() {
             {/* <CartEmpty/> */}
             <div className="items">
                 {cartItem.map((item,index)=>{
-                   return <CartItem key={index} title={item.title} price={item.price} image={item.img} />
+                   return <CartItem key={index} productSize = {item.productSize} title={item.title} price={item.price} image={item.img} />
                 })}
             </div>
             <div>

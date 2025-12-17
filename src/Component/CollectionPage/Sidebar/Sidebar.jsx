@@ -9,6 +9,7 @@ export default function Sidebar() {
   const { showFilterBox } = useContext(contextProvider);
   const { showFilter } = useContext(contextProvider);
   const { productsData } = useContext(contextProvider);
+  const { categoryHandler } = useContext(contextProvider);
   const categories = [];
   const type = [];
   productsData.map(item => {
@@ -21,6 +22,7 @@ export default function Sidebar() {
       type.push(item.type);
     }
   });
+
   return (
     <div className={`${style.sidebar} ${showFilter === true && style.active}`}>
       <h1><BsFillFilterSquareFill onClick={showFilterBox} className={style.filterIcon} />Filters</h1>
