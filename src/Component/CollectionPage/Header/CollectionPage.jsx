@@ -13,7 +13,7 @@ export default function CollectionPage() {
 
   const {showFilterBox} = useContext(contextProvider);
   const {showFilter} = useContext(contextProvider);
-  const {productsData} = useContext(contextProvider);
+  const {products} = useContext(contextProvider);
   const {productDetailHandler} = useContext(contextProvider);
   
   return (
@@ -34,7 +34,7 @@ export default function CollectionPage() {
         </div>
        {/* <Loader/> */}
        <div className={style.productsData}>
-           {productsData.map((item,index) => {
+           {products.map((item,index) => {
             return <Link onClick = {() => productDetailHandler(index)} key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} image = {item.img} price = {item.price}/></Link>
            })}
         </div>

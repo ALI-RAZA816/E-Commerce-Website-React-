@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import BestSeller from './Component/HomePage/BestSeller/BestSeller';
 import Collection from './Component/HomePage/Collection/Collection';
@@ -21,6 +21,10 @@ import {productsData} from '../items';
 function App() {
 
   //states
+  useEffect(()=>{
+    setProducts(productsData);
+  },[]);
+  const [products, setProducts] = useState([]);
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const [search, setSearch] = useState(false);
@@ -40,10 +44,10 @@ function App() {
   const showSearchBar = () => setSearch(true);
   const hideSearchBar = () => setSearch(false);
   const productDetailHandler = (index) =>{
-    const productTitle = productsData[index].title
-    const productImage = productsData[index].img
-    const productPrice = productsData[index].price
-    const productSizes = productsData[index].size
+    const productTitle = products[index].title
+    const productImage = products[index].img
+    const productPrice = products[index].price
+    const productSizes = products[index].size
     setTitle(productTitle);
     setPrice(productPrice);
     setImage(productImage);
@@ -58,18 +62,18 @@ function App() {
       return;
     }
 
-    const item = productsData[itemIndex];
+    const item = products[itemIndex];
     setcartItem([...cartItem,item]);
     setActiveSize(null);
   }
   
   const sizeHandler = (item) => {
     setActiveSize(item);
-    productsData[itemIndex].productSize = item;
+    products[itemIndex].productSize = item;
   }
 
   const quantityHandler = (event) => {
-    productsData[itemIndex].quantity = event.target.value;
+    products[itemIndex].quantity = event.target.value;
   }
 
   return (
@@ -84,7 +88,7 @@ function App() {
           search,
           showSearchBar,
           hideSearchBar,
-          productsData,
+          products,
           productDetailHandler,
           title,
           price,

@@ -7,9 +7,9 @@ import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
 export default function ProductsContainer() {
 
-  const {productsData} = useContext(contextProvider);
+  const {products} = useContext(contextProvider);
   const {productDetailHandler} = useContext(contextProvider);
-  const homeProducts = productsData.slice(0,10);
+  const homeProducts = products.slice(0,10);
   return (
     <div className={style.ProductsContainer}>
       <div className={style.productGrid}>

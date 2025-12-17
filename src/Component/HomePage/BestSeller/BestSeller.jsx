@@ -6,9 +6,9 @@ import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
 
 export default function BestSeller() {
-    const {productsData} = useContext(contextProvider);
+    const {products} = useContext(contextProvider);
     const {productDetailHandler} = useContext(contextProvider);
-      const BestSeller = productsData.slice(0,5);
+      const BestSeller = products.slice(0,5);
     return (
         <div className={style.BestSeller}>
             <h1>Best <span>Seller</span></h1>

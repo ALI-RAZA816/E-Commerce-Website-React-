@@ -8,16 +8,16 @@ export default function Sidebar() {
 
   const { showFilterBox } = useContext(contextProvider);
   const { showFilter } = useContext(contextProvider);
-  const { productsData } = useContext(contextProvider);
-  const { categoryHandler } = useContext(contextProvider);
+  const { products } = useContext(contextProvider);
+  
   const categories = [];
   const type = [];
-  productsData.map(item => {
+  products.map(item => {
     if (!categories.includes(item.category)) {
       categories.push(item.category);
     }
   });
-  productsData.map(item => {
+  products.map(item => {
     if (!type.includes(item.type)) {
       type.push(item.type);
     }
