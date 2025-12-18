@@ -22,7 +22,7 @@ export default function CollectionPage() {
         <Sidebar showFilter = {showFilter} showFilterBox = {showFilterBox} />
       </div>
       <div className={style.product}>
-        <div>
+        <div className={style.productSorting}>
           <h1>All <span>collections</span></h1>
           <div className={style.sorting}>
             <select name="" id="">

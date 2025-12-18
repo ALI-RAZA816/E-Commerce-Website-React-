@@ -45,7 +45,9 @@ function App() {
   const NavLinksHandler = () => setNavlinks(true);
   const removeLinksHandler = () => setNavlinks(false);
   const showFilterBox = () => setShowFilter(!showFilter);
-  const showSearchBar = () => setSearch(true);
+  const showSearchBar = () => {
+    setSearch(true)
+  };
   const hideSearchBar = () => setSearch(false);
   const productDetailHandler = (index) =>{
     const productTitle = products[index].title
@@ -87,14 +89,7 @@ function App() {
   const quantityHandler = (event) => {
     products[itemIndex].quantity = event.target.value;
   }
-
-  // const categoryHandler = (event,category) =>{
-  //   if(event.target.checked === true){
-  //     setCollectionProducts(products.filter(item => item.category.includes(category)));
-  //   }else{
-  //     setCollectionProducts(productsData);
-  //   }
-  // }
+  
   const categoryHandler = (event,category) =>{
     if(event.target.checked === true){
       const filterProducts = products.filter(item => item.category.includes(category));

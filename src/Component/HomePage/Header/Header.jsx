@@ -9,11 +9,12 @@ import {
 } from "react-router-dom";
 import { useContext } from "react";
 import contextProvider from "../../../assets/ContextProvider/ContextStore";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 
 
 export default function Header() {
-
+  const location = useLocation();
   const {NavLinksHandler} = useContext(contextProvider);
   const {removeLinksHandler} = useContext(contextProvider);
   const {showNavlinks} = useContext(contextProvider);
