@@ -8,6 +8,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -19,6 +20,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -30,6 +32,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -41,6 +44,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -63,6 +67,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -73,6 +78,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -84,6 +90,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -107,6 +114,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -118,6 +126,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -128,6 +137,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -139,6 +149,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -150,6 +161,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -162,6 +174,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -173,6 +186,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -183,6 +197,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -194,6 +209,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -205,6 +221,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -217,6 +234,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -228,6 +246,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -239,6 +258,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -250,6 +270,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -260,6 +281,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -272,6 +294,7 @@ export const productsData = [
     type: "Bottomwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -282,6 +305,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -293,6 +317,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -305,6 +330,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -315,6 +341,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -327,6 +354,7 @@ export const productsData = [
     type: "Bottomwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -337,6 +365,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -348,6 +377,7 @@ export const productsData = [
     category: "Men",
     type: "Bottomwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -360,6 +390,7 @@ export const productsData = [
     type: "Topwear",
     quantity:1,
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -371,6 +402,7 @@ export const productsData = [
     productSize:null,
     quantity:1,
     type: "Topwear",
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -382,6 +414,7 @@ export const productsData = [
     type: "Bottomwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -393,6 +426,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -403,6 +437,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -414,6 +449,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -425,6 +461,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -437,6 +474,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -448,6 +486,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -458,6 +497,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -469,6 +509,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -481,6 +522,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -492,6 +534,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -502,6 +545,7 @@ export const productsData = [
     category: "Women",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -514,6 +558,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -525,6 +570,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -536,6 +582,7 @@ export const productsData = [
     type: "Topwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -546,6 +593,7 @@ export const productsData = [
     category: "Men",
     type: "Topwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -558,6 +606,7 @@ export const productsData = [
     productSize:null,
     quantity:1,
     type: "Bottomwear",
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -569,6 +618,7 @@ export const productsData = [
     type: "Winterwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -579,6 +629,7 @@ export const productsData = [
     category: "Men",
     type: "Winterwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -590,6 +641,7 @@ export const productsData = [
     category: "Kids",
     type: "Bottomwear",
     productSize:null,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     quantity:1,
     size: ["S", "M", "X", "XL", "XXL"]
   },
@@ -602,6 +654,7 @@ export const productsData = [
     type: "Winterwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -613,6 +666,7 @@ export const productsData = [
     type: "Bottomwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -621,6 +675,7 @@ export const productsData = [
     title: "Kid Tapered Slim Fit Trouser",
     price: 23,
     category: "Kids",
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     type: "Bottomwear",
     quantity:1,
     productSize:null,
@@ -635,6 +690,7 @@ export const productsData = [
     type: "Winterwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   },
   {
@@ -646,6 +702,7 @@ export const productsData = [
     type: "Winterwear",
     productSize:null,
     quantity:1,
+    relatedImages:['/Images/relatedImages/p_img2_2.png','/Images/relatedImages/p_img2_3.png','/Images/relatedImages/p_img2_4.png'],
     size: ["S", "M", "X", "XL", "XXL"]
   }
 ]

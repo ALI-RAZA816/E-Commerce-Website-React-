@@ -3,6 +3,7 @@ import style from '../Cart/Cart.module.css';
 import Summary from "./Summary";
 import { useContext } from "react";
 import contextProvider from "../../assets/ContextProvider/ContextStore";
+import CartEmpty from "../CartEmpty/CartEmpty";
 
 export default function Cart() {
 
@@ -10,12 +11,12 @@ export default function Cart() {
 
     return (
         <div className={style.cart}>
-            {/* <CartEmpty/> */}
+            {cartItem.length === 0 ? <CartEmpty/>:
             <div className="items">
                 {cartItem.map((item,index)=>{
-                   return <CartItem key={index} id = {item.id} productSize = {item.productSize} title={item.title} price={item.price} image={item.img} />
+                   return <CartItem key={index} quantity = {item.quantity} id = {item.id} productSize = {item.productSize} title={item.title} price={item.price} image={item.img} />
                 })}
-            </div>
+            </div>}
             <div>
                <Summary/>
             </div>

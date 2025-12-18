@@ -8,6 +8,9 @@ export default function TopSection() {
     const {price} = useContext(contextProvider);
     const {image} = useContext(contextProvider);
     const {sizes} = useContext(contextProvider);
+    const {changeImageHandler} = useContext(contextProvider);
+    const {quantityHandler} = useContext(contextProvider);
+    const {otherImages} = useContext(contextProvider);
     const {activeSize} = useContext(contextProvider);
     const {ADDTOCARTHandler} = useContext(contextProvider);
     const {sizeHandler} = useContext(contextProvider);
@@ -16,10 +19,9 @@ export default function TopSection() {
             <div className={style.imageGrid}>
                 <div className={style.left}>
                     <div className={style.relatedimages}>
-                        <div><img src={image} alt="" /></div>
-                        <div><img src={image} alt="" /></div>
-                        <div><img src={image} alt="" /></div>
-                        <div><img src={image} alt="" /></div>
+                        {otherImages?.map((item, index) =>{
+                            return <div key={index} onClick={() => changeImageHandler(item)}><img src={item} alt="" /></div>
+                        })}
                     </div>
                     <div className={style.productImage}>
                         <img src={image} alt="" />
@@ -46,6 +48,7 @@ export default function TopSection() {
                                 return <span key={index} className={activeSize === item ? style.activeBorder : undefined} onClick={() => sizeHandler(item)}>{item}</span>
                             })}
                         </div>
+                        <input type="number" onChange={quantityHandler} min={1} placeholder='1' />
                         <button onClick={ADDTOCARTHandler}>Add to cart</button>
                     </div>
                     <ul>

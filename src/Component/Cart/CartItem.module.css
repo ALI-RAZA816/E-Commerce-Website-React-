@@ -37,12 +37,7 @@
     color: #494949;
 }
 
-.quantity input{
-    height: 50px;
-    width: 140px;
-    margin-right: .5rem;
-    outline: none;
-    padding: 0 .5rem;
-    background: none;
-    border: 1px solid #DFDFDF;
+.quantity span{
+    color: #494949;
+    font-size: 16px;
 }

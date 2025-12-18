@@ -14,6 +14,7 @@
 .relatedimages div{
     max-width: 138px;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .relatedimages div img{
@@ -56,7 +57,19 @@
 }
 
 .size{
+    display: flex;
+    flex-direction: column;
     margin: 1.5rem 0;
+}
+
+.size input{
+    height: 50px;
+    width: 140px;
+    margin-top: .8rem;
+    outline: none;
+    padding: 0 .5rem;
+    background: none;
+    border: 1px solid #DFDFDF;
 }
 
 .size > h3{

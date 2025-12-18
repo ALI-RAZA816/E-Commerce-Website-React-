@@ -25,6 +25,7 @@ function App() {
     setProducts(productsData);
     setCollectionProducts(productsData);
   },[]);
+
   const [products, setProducts] = useState([]);
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
@@ -32,6 +33,7 @@ function App() {
   const [title,setTitle] = useState(null);
   const [price,setPrice] = useState(null);
   const [image,setImage] = useState(null);
+  const [otherImages,setotherImage] = useState([]);
   const [sizes,setSizes] = useState(null);
   const [activeSize,setActiveSize] = useState(null);
   const [itemIndex,setitemIndex] = useState(null);
@@ -50,15 +52,17 @@ function App() {
     const productImage = products[index].img
     const productPrice = products[index].price
     const productSizes = products[index].size
+    const DiffImages = products[index].relatedImages
     setTitle(productTitle);
     setPrice(productPrice);
     setImage(productImage);
     setSizes(productSizes);
+    setotherImage(DiffImages);
     setitemIndex(index);
   }
 
-  
   const ADDTOCARTHandler = () =>{
+
     if(activeSize === null){
       alert('Please select item size');
       return;
@@ -67,6 +71,7 @@ function App() {
     const item = products[itemIndex];
     setcartItem([...cartItem,item]);
     setActiveSize(null);
+
   }
   
   const sizeHandler = (item) => {
@@ -85,18 +90,23 @@ function App() {
       setCollectionProducts(productsData);
     }
   }
+
   const typeHandler = (event,category) =>{
     if(event.target.checked === true){
       setCollectionProducts(products.filter(item => item.type.includes(category)));
     }else{
       setCollectionProducts(productsData);
     }
-  }
+  } 
 
   const deleteHandler = (id) =>{
     setcartItem(cartItem.filter((item) => {
       return item.id !== id
     }));
+  }
+
+  const changeImageHandler = (item) => {
+    setImage(item)
   }
 
   return (
@@ -117,15 +127,17 @@ function App() {
           price,
           image,
           sizes,
+          otherImages,
           ADDTOCARTHandler,
           cartItem,
           sizeHandler,
           activeSize,
-          quantityHandler,
           categoryHandler,
           collectionProducts,
           typeHandler,
-          deleteHandler
+          deleteHandler,
+          quantityHandler,
+          changeImageHandler
         }}>
           <Router>
             <Header />
