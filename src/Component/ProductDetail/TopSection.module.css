@@ -97,7 +97,6 @@
     background-color: #FBFBFB;
 }
 
-
 .sizesNumber span:hover{
     border-color: orange;
 }
@@ -149,4 +148,55 @@
     width: 42px;
     line-height: 40px;
   }
+}
+
+.sizeErr{
+    position: absolute;
+    top: 100px;
+    text-align:center;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 1rem;
+    width: 180px;
+    overflow: hidden;
+    right:-100%;
+    transition: right .30s ease;
+    box-shadow: 0 0 10px #efefef;
+    background-color: #fff;
+}
+
+.active{
+    right: 15px;
+}
+
+.sizeErr::after{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: red;
+}
+
+.active::after{
+    animation: decreasing 5s linear 0s;
+}
+
+@keyframes decreasing {
+    to{
+        width: 0;
+    }
+    from{
+        width: 100%;
+    }
+}
+
+.sizeErr span{
+    color: red;
+    display: flex;
+    align-items: center;
+    /* color: #000000; */
+    font-size: 16px;
+    text-transform: capitalize;
 }

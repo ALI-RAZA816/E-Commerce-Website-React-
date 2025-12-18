@@ -1,25 +1,33 @@
 import { IoStarSharp } from "react-icons/io5";
 import style from '../ProductDetail/TopSection.module.css';
 import { useContext } from "react";
+import { RxCrossCircled } from "react-icons/rx";
+
 import contextProvider from "../../assets/ContextProvider/ContextStore";
 
 export default function TopSection() {
-    const {title} = useContext(contextProvider);
-    const {price} = useContext(contextProvider);
-    const {image} = useContext(contextProvider);
-    const {sizes} = useContext(contextProvider);
-    const {changeImageHandler} = useContext(contextProvider);
-    const {quantityHandler} = useContext(contextProvider);
-    const {otherImages} = useContext(contextProvider);
-    const {activeSize} = useContext(contextProvider);
-    const {ADDTOCARTHandler} = useContext(contextProvider);
-    const {sizeHandler} = useContext(contextProvider);
+
+    const { title } = useContext(contextProvider);
+    const { price } = useContext(contextProvider);
+    const { image } = useContext(contextProvider);
+    const { sizes } = useContext(contextProvider);
+    const { changeImageHandler } = useContext(contextProvider);
+    const { quantityHandler } = useContext(contextProvider);
+    const { otherImages } = useContext(contextProvider);
+    const { activeSize } = useContext(contextProvider);
+    const { ADDTOCARTHandler } = useContext(contextProvider);
+    const { sizeHandler } = useContext(contextProvider);
+    const { sizeErr } = useContext(contextProvider);
+
     return (
         <div>
+            <div className={`${style.sizeErr} ${sizeErr === true ? style.active : ' '}`}>
+                <span><RxCrossCircled style={{fontSize:'20px',marginRight:'.5rem',color:'red'}} /> Select Item Size</span>
+            </div>
             <div className={style.imageGrid}>
                 <div className={style.left}>
                     <div className={style.relatedimages}>
-                        {otherImages?.map((item, index) =>{
+                        {otherImages?.map((item, index) => {
                             return <div key={index} onClick={() => changeImageHandler(item)}><img src={item} alt="" /></div>
                         })}
                     </div>
@@ -30,12 +38,12 @@ export default function TopSection() {
                 <div className={style.right}>
                     <h1>{title}</h1>
                     <div className="ratings">
-                        <span><IoStarSharp style={{marginRight:'.5rem',color:'#FF532E',fontSize:''}} /></span>
-                        <span><IoStarSharp style={{marginRight:'.5rem',color:'#FF532E',fontSize:''}} /></span>
-                        <span><IoStarSharp style={{marginRight:'.5rem',color:'#FF532E',fontSize:''}} /></span>
-                        <span><IoStarSharp style={{marginRight:'.5rem',color:'#FF532E',fontSize:''}} /></span>
-                        <span><IoStarSharp style={{marginRight:'.5rem',color:'#FF532E',fontSize:''}} /></span>
-                        <span style={{color:'#1C1C1C',fontSize:'16px'}}>(122)</span>
+                        <span><IoStarSharp style={{ marginRight: '.5rem', color: '#FF532E', fontSize: '' }} /></span>
+                        <span><IoStarSharp style={{ marginRight: '.5rem', color: '#FF532E', fontSize: '' }} /></span>
+                        <span><IoStarSharp style={{ marginRight: '.5rem', color: '#FF532E', fontSize: '' }} /></span>
+                        <span><IoStarSharp style={{ marginRight: '.5rem', color: '#FF532E', fontSize: '' }} /></span>
+                        <span><IoStarSharp style={{ marginRight: '.5rem', color: '#FF532E', fontSize: '' }} /></span>
+                        <span style={{ color: '#1C1C1C', fontSize: '16px' }}>(122)</span>
                     </div>
                     <div className={style.price}>
                         <h1>$ {price}</h1>
@@ -44,7 +52,7 @@ export default function TopSection() {
                     <div className={style.size}>
                         <h3>Select Size</h3>
                         <div className={style.sizesNumber}>
-                            {sizes?.map((item,index)=>{
+                            {sizes?.map((item, index) => {
                                 return <span key={index} className={activeSize === item ? style.activeBorder : undefined} onClick={() => sizeHandler(item)}>{item}</span>
                             })}
                         </div>

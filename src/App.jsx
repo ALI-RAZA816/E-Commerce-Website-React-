@@ -33,6 +33,7 @@ function App() {
   const [title,setTitle] = useState(null);
   const [price,setPrice] = useState(null);
   const [image,setImage] = useState(null);
+  const [sizeErr,setSizeErr] = useState(false);
   const [otherImages,setotherImage] = useState([]);
   const [sizes,setSizes] = useState(null);
   const [activeSize,setActiveSize] = useState(null);
@@ -64,15 +65,16 @@ function App() {
   }
 
   const ADDTOCARTHandler = () =>{
-
-    if(cartItem.includes(cartItem.id)){
-      alert('already');
-      return;
-    }
     
-    if(activeSize === null){
-      alert('Please select item size');
+    setTimeout(() =>{
+      setSizeErr(false);
+    },5000);
+
+    if( activeSize === null) {
+      setSizeErr(true);
       return;
+    }else{
+      setSizeErr(false);
     }
 
     const item = products[itemIndex];
@@ -150,7 +152,8 @@ function App() {
           deleteHandler,
           quantityHandler,
           changeImageHandler,
-          searchHandler
+          searchHandler,
+          sizeErr
         }}>
           <Router>
             <Header />
