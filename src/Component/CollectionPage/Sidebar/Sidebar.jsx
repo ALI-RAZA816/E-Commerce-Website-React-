@@ -9,6 +9,8 @@ export default function Sidebar() {
   const { showFilterBox } = useContext(contextProvider);
   const { showFilter } = useContext(contextProvider);
   const { products } = useContext(contextProvider);
+  const { categoryHandler } = useContext(contextProvider);
+  const { typeHandler } = useContext(contextProvider);
   
   const categories = [];
   const type = [];
@@ -30,7 +32,7 @@ export default function Sidebar() {
         <h3>Categories</h3>
         {categories.map((item, index) => {
           return <div key={index}>
-            <input type="checkbox" id={item} />
+            <input type="checkbox" onChange={(event) => categoryHandler(event, item)} id={item} />
             <label htmlFor={item} >{item}</label>
           </div>
         })}
@@ -39,7 +41,7 @@ export default function Sidebar() {
         <h3>Type</h3>
         {type.map((item, index) => {
           return <div key={index}>
-            <input type="checkbox" id={item} />
+            <input type="checkbox" onClick={(event) => typeHandler(event,item)} id={item} />
             <label htmlFor={item}>{item}</label>
           </div>
         })}

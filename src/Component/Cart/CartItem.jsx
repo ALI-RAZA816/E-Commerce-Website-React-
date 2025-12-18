@@ -6,8 +6,9 @@ import contextProvider from '../../assets/ContextProvider/ContextStore';
 
 
 
-export default function CartItem({title,price,image,productSize}) {
+export default function CartItem({title,price,image,productSize, id}) {
     const {quantityHandler} = useContext(contextProvider);
+    const {deleteHandler} = useContext(contextProvider);
     return (
         <div>
             <div className={style.cartProduct}>
@@ -24,7 +25,7 @@ export default function CartItem({title,price,image,productSize}) {
                 <div className={style.quantity}> 
                     <input type="number" onChange={quantityHandler} min={1} placeholder='1' />
                 </div>
-                <RiDeleteBinLine style={{ fontSize: '20px', cursor: 'pointer' }} />
+                <RiDeleteBinLine onClick={() => deleteHandler(id)} style={{ fontSize: '20px', cursor: 'pointer' }} />
             </div>
         </div>
     )

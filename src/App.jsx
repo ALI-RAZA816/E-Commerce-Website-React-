@@ -23,6 +23,7 @@ function App() {
   //states
   useEffect(()=>{
     setProducts(productsData);
+    setCollectionProducts(productsData);
   },[]);
   const [products, setProducts] = useState([]);
   const [showNavlinks, setNavlinks] = useState(false);
@@ -35,6 +36,7 @@ function App() {
   const [activeSize,setActiveSize] = useState(null);
   const [itemIndex,setitemIndex] = useState(null);
   const [cartItem, setcartItem] = useState([]);
+  const [collectionProducts,setCollectionProducts] = useState([]);
  
 
   //functions
@@ -76,6 +78,27 @@ function App() {
     products[itemIndex].quantity = event.target.value;
   }
 
+  const categoryHandler = (event,category) =>{
+    if(event.target.checked === true){
+      setCollectionProducts(products.filter(item => item.category.includes(category)));
+    }else{
+      setCollectionProducts(productsData);
+    }
+  }
+  const typeHandler = (event,category) =>{
+    if(event.target.checked === true){
+      setCollectionProducts(products.filter(item => item.type.includes(category)));
+    }else{
+      setCollectionProducts(productsData);
+    }
+  }
+
+  const deleteHandler = (id) =>{
+    setcartItem(cartItem.filter((item) => {
+      return item.id !== id
+    }));
+  }
+
   return (
     <div>
       <div className='container'>
@@ -99,6 +122,10 @@ function App() {
           sizeHandler,
           activeSize,
           quantityHandler,
+          categoryHandler,
+          collectionProducts,
+          typeHandler,
+          deleteHandler
         }}>
           <Router>
             <Header />

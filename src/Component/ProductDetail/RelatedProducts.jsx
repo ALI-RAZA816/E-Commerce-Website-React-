@@ -6,8 +6,8 @@ import contextProvider from '../../assets/ContextProvider/ContextStore';
 
 export default function RelatedProducts() {
 
-    const {productsData} = useContext(contextProvider);
-    const relatedProducts = productsData.slice(0,5);
+    const {products} = useContext(contextProvider);
+    const relatedProducts = products.slice(0,5);
     const {productDetailHandler} = useContext(contextProvider);
 
     return (

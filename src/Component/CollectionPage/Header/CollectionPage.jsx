@@ -13,7 +13,7 @@ export default function CollectionPage() {
 
   const {showFilterBox} = useContext(contextProvider);
   const {showFilter} = useContext(contextProvider);
-  const {products} = useContext(contextProvider);
+  const { collectionProducts } = useContext(contextProvider);
   const {productDetailHandler} = useContext(contextProvider);
   
   return (
@@ -28,13 +28,13 @@ export default function CollectionPage() {
             <select name="" id="">
               <option value="relevant">Sort by: Relevant</option>
               <option value="low to high">Sort by: Low to High</option>
-              <option  value="high to low">Sort by: Hight to Low</option>
+              <option value="high to low">Sort by: Hight to Low</option>
             </select>
           </div>
         </div>
        {/* <Loader/> */}
        <div className={style.productsData}>
-           {products.map((item,index) => {
+           {collectionProducts.map((item,index) => {
             return <Link onClick = {() => productDetailHandler(index)} key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} image = {item.img} price = {item.price}/></Link>
            })}
         </div>
