@@ -63,6 +63,11 @@ function App() {
 
   const ADDTOCARTHandler = () =>{
 
+    if(cartItem.includes(cartItem.id)){
+      alert('already');
+      return;
+    }
+    
     if(activeSize === null){
       alert('Please select item size');
       return;
@@ -90,7 +95,7 @@ function App() {
       setCollectionProducts(productsData);
     }
   }
-
+  
   const typeHandler = (event,category) =>{
     if(event.target.checked === true){
       setCollectionProducts(products.filter(item => item.type.includes(category)));
@@ -98,15 +103,19 @@ function App() {
       setCollectionProducts(productsData);
     }
   } 
-
+  
   const deleteHandler = (id) =>{
     setcartItem(cartItem.filter((item) => {
       return item.id !== id
     }));
   }
-
+  
   const changeImageHandler = (item) => {
     setImage(item)
+  }
+  
+  const searchHandler = (event) =>{
+    setCollectionProducts(products.filter(item => item.title.includes(event.target.value)));
   }
 
   return (
@@ -137,7 +146,8 @@ function App() {
           typeHandler,
           deleteHandler,
           quantityHandler,
-          changeImageHandler
+          changeImageHandler,
+          searchHandler
         }}>
           <Router>
             <Header />

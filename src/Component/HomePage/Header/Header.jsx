@@ -28,10 +28,10 @@ export default function Header() {
         <div className={`${style.links} ${showNavlinks === true && style.active}`}>
             <span onClick={removeLinksHandler}><FaAngleLeft/> Back</span>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/collection">Collection</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link onClick = {removeLinksHandler} to="/">Home</Link></li>
+                <li><Link onClick = {removeLinksHandler} to="/collection">Collection</Link></li>
+                <li><Link onClick = {removeLinksHandler} to="/about">About</Link></li>
+                <li><Link onClick = {removeLinksHandler} to="/contact">Contact</Link></li>
             </ul>
         </div>
         <div className="icons" style={{display:'flex',alignItems:'center'}}>

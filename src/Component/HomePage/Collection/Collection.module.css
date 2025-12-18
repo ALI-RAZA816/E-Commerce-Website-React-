@@ -6,19 +6,8 @@
 .productsCollection h1{
     font-size: 35px;
     color: #707070;
-    position: relative;
     font-weight: normal;
     text-transform: uppercase;
-}
-
-.productsCollection h1::before{
-    position: absolute;
-    content: " ";
-    top: 50%;
-    right:33%;
-    background-color: #343434;
-    height: 2px;
-    width:4%;
 }
 
 .productsCollection h1 span{

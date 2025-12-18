@@ -7,12 +7,13 @@ import contextProvider from '../../assets/ContextProvider/ContextStore';
 export default function SearchBar() {
 
     const {search} = useContext(contextProvider);
+    const {searchHandler} = useContext(contextProvider);
     const {hideSearchBar} = useContext(contextProvider);
     return (
         <div className={`${style.searchContainer} ${search === true && style.active}`}>
             <div className={style.field}>
                 <div className={style.inputField}>
-                    <input type="text" placeholder='Search' />
+                    <input type="text" onChange={searchHandler} placeholder='Search' />
                     <IoSearch style={{fontSize:'1.2rem',cursor:'pointer'}} />
                 </div>
                 <RxCross2 onClick={hideSearchBar} style={{fontSize:'1.5rem',marginLeft:'1rem',cursor:'pointer'}} />
