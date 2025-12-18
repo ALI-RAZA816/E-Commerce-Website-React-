@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header className={style.header}>
         <div className={style.logo}>
-            <img src="/Images/logo.png" alt="" />
+            <Link  onClick = {removeLinksHandler} to = "/" ><img src="/Images/logo.png" alt="" /></Link>
         </div>
         <div className={`${style.links} ${showNavlinks === true && style.active}`}>
             <span onClick={removeLinksHandler}><FaAngleLeft/> Back</span>

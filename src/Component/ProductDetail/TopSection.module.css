@@ -201,7 +201,7 @@
 .sizeErr span{
     color: red;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     font-size: 16px;
     text-transform: capitalize;
 }
