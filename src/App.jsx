@@ -88,9 +88,17 @@ function App() {
     products[itemIndex].quantity = event.target.value;
   }
 
+  // const categoryHandler = (event,category) =>{
+  //   if(event.target.checked === true){
+  //     setCollectionProducts(products.filter(item => item.category.includes(category)));
+  //   }else{
+  //     setCollectionProducts(productsData);
+  //   }
+  // }
   const categoryHandler = (event,category) =>{
     if(event.target.checked === true){
-      setCollectionProducts(products.filter(item => item.category.includes(category)));
+      const filterProducts = products.filter(item => item.category.includes(category));
+      setCollectionProducts(filterProducts);
     }else{
       setCollectionProducts(productsData);
     }
