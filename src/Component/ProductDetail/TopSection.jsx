@@ -2,6 +2,8 @@ import { IoStarSharp } from "react-icons/io5";
 import style from '../ProductDetail/TopSection.module.css';
 import { useContext } from "react";
 import { RxCrossCircled } from "react-icons/rx";
+import { CiCircleCheck } from "react-icons/ci";
+
 
 import contextProvider from "../../assets/ContextProvider/ContextStore";
 
@@ -18,11 +20,15 @@ export default function TopSection() {
     const { ADDTOCARTHandler } = useContext(contextProvider);
     const { sizeHandler } = useContext(contextProvider);
     const { sizeErr } = useContext(contextProvider);
+    const { itemAddMsg } = useContext(contextProvider);
 
     return (
         <div>
             <div className={`${style.sizeErr} ${sizeErr === true ? style.active : ' '}`}>
-                <span><RxCrossCircled style={{fontSize:'20px',marginRight:'.5rem',color:'red'}} /> Select Item Size</span>
+                <span><RxCrossCircled style={{fontSize:'20px',marginRight:'.5rem',color:'red'}} /> Select item size</span>
+            </div>
+            <div className={`${style.itemAdd} ${itemAddMsg === true ? style.active : ' '}`}>
+                <span><CiCircleCheck  style={{fontSize:'20px',marginRight:'.5rem',color:'green'}} /> Item successfully added</span>
             </div>
             <div className={style.imageGrid}>
                 <div className={style.left}>

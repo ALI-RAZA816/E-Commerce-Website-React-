@@ -19,7 +19,6 @@ import contextProvider from './assets/ContextProvider/ContextStore';
 import {productsData} from '../items';
 
 function App() {
-
   //states
   useEffect(()=>{
     setProducts(productsData);
@@ -34,6 +33,7 @@ function App() {
   const [price,setPrice] = useState(null);
   const [image,setImage] = useState(null);
   const [sizeErr,setSizeErr] = useState(false);
+  const [itemAddMsg,setitemAddMsg] = useState(false);
   const [otherImages,setotherImage] = useState([]);
   const [sizes,setSizes] = useState(null);
   const [activeSize,setActiveSize] = useState(null);
@@ -65,16 +65,19 @@ function App() {
   }
 
   const ADDTOCARTHandler = () =>{
-    
+
     setTimeout(() =>{
       setSizeErr(false);
+      setitemAddMsg(false);
     },5000);
 
     if( activeSize === null) {
       setSizeErr(true);
+      setitemAddMsg(false);
       return;
     }else{
       setSizeErr(false);
+      setitemAddMsg(true);
     }
 
     const item = products[itemIndex];
@@ -153,7 +156,8 @@ function App() {
           quantityHandler,
           changeImageHandler,
           searchHandler,
-          sizeErr
+          sizeErr,
+          itemAddMsg
         }}>
           <Router>
             <Header />
