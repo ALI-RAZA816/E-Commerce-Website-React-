@@ -143,7 +143,7 @@ function App() {
   const searchHandler = (event) =>{
     setCollectionProducts(products.filter(item => item.title.includes(event.target.value)));
   }
-
+  
   return (
     <div>
       <div className='container'>
