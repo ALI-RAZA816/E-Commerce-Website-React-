@@ -12,13 +12,18 @@ export default function Sidebar() {
   const { categoryHandler } = useContext(contextProvider);
   const { typeHandler } = useContext(contextProvider);
   
+  // category array | Categories: "women", "men" , "kids";
   const categories = [];
+  // type array | type: "topwear", "bottomwear" , "winterwear";
   const type = [];
+
+  // filter categories
   products.map(item => {
     if (!categories.includes(item.category)) {
       categories.push(item.category);
     }
   });
+  // filter types
   products.map(item => {
     if (!type.includes(item.type)) {
       type.push(item.type);

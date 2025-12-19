@@ -4,10 +4,11 @@ import style from '../Cart/CartItem.module.css';
 import { RiDeleteBinLine } from "react-icons/ri";
 import contextProvider from '../../assets/ContextProvider/ContextStore';
 
-
-
 export default function CartItem({title,price,image,productSize,quantity, id}) {
+
+    // context
     const {deleteHandler} = useContext(contextProvider);
+
     return (
         <div>
             <div className={style.cartProduct}>

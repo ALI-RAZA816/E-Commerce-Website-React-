@@ -7,9 +7,13 @@ import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
 export default function ProductsContainer() {
 
+  // context
   const {products} = useContext(contextProvider);
   const {productDetailHandler} = useContext(contextProvider);
+  
+  // splice items
   const homeProducts = products.slice(0,10);
+
   return (
     <div className={style.ProductsContainer}>
       <div className={style.productGrid}>

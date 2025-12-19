@@ -20,11 +20,15 @@ import {productsData} from '../items';
 
 function App() {
   //states
+
+  //renderinitial items
   useEffect(()=>{
     setProducts(productsData);
     setCollectionProducts(productsData);
   },[]);
 
+
+  //states
   const [products, setProducts] = useState([]);
   const [showNavlinks, setNavlinks] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
@@ -39,6 +43,7 @@ function App() {
   const [activeSize,setActiveSize] = useState(null);
   const [itemIndex,setitemIndex] = useState(null);
   const [cartItem, setcartItem] = useState([]);
+  const [cartQuantity,setcartQuantity] = useState(1);
   const [collectionProducts,setCollectionProducts] = useState([]);
  
 
@@ -64,6 +69,8 @@ function App() {
     setitemIndex(index);
   }
 
+
+  // eventListner add item to cart
   const ADDTOCARTHandler = () =>{
 
     setTimeout(() =>{
@@ -81,20 +88,27 @@ function App() {
     }
 
     const item = products[itemIndex];
-    setcartItem([...cartItem,item]);
+    setcartItem([...cartItem,
+      {...item,
+        quantity:cartQuantity,
+        itemSize:activeSize
+      }]);
     setActiveSize(null);
 
   }
   
+  // selectSize Handler
   const sizeHandler = (item) => {
     setActiveSize(item);
-    products[itemIndex].productSize = item;
   }
 
+  // itemSize Handler
   const quantityHandler = (event) => {
-    products[itemIndex].quantity = event.target.value;
+    setcartQuantity(event.target.value);
   }
-  
+
+
+  // filter handler // Categories: "Women","Men","Kids"
   const categoryHandler = (event,category) =>{
     if(event.target.checked === true){
       const filterProducts = products.filter(item => item.category.includes(category));
@@ -104,6 +118,7 @@ function App() {
     }
   }
   
+  // filter handler // Type: "Topwear","BottomWear","WitnerWear"
   const typeHandler = (event,category) =>{
     if(event.target.checked === true){
       setCollectionProducts(products.filter(item => item.type.includes(category)));
@@ -112,16 +127,19 @@ function App() {
     }
   } 
   
+  // deleteHandler  //delete item from cart
   const deleteHandler = (id) =>{
     setcartItem(cartItem.filter((item) => {
       return item.id !== id
     }));
   }
   
+  // select item related images
   const changeImageHandler = (item) => {
     setImage(item)
   }
   
+  // searchBar handler
   const searchHandler = (event) =>{
     setCollectionProducts(products.filter(item => item.title.includes(event.target.value)));
   }
@@ -153,11 +171,12 @@ function App() {
           collectionProducts,
           typeHandler,
           deleteHandler,
-          quantityHandler,
           changeImageHandler,
           searchHandler,
           sizeErr,
-          itemAddMsg
+          itemAddMsg,
+          quantityHandler,
+          cartQuantity
         }}>
           <Router>
             <Header />

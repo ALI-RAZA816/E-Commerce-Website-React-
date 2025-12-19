@@ -1,16 +1,14 @@
 import style from '../Header/CollectionPage.module.css';
 import Sidebar from '../Sidebar/Sidebar';
 import Item from '../../HomePage/Collection/Item';
-
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from 'react';
 import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
 
 export default function CollectionPage() {
 
+  // context
   const {showFilterBox} = useContext(contextProvider);
   const {showFilter} = useContext(contextProvider);
   const { collectionProducts } = useContext(contextProvider);
@@ -32,7 +30,6 @@ export default function CollectionPage() {
             </select>
           </div>
         </div>
-       {/* <Loader/> */}
        <div className={style.productsData}>
            {collectionProducts.map((item,index) => {
             return <Link onClick = {() => productDetailHandler(index)} key={index} style={{textDecoration:'none'}} to="/productDetail"><Item title={item.title} image = {item.img} price = {item.price}/></Link>

@@ -6,9 +6,11 @@ import contextProvider from '../../assets/ContextProvider/ContextStore';
 
 export default function SearchBar() {
 
+    // context
     const {search} = useContext(contextProvider);
     const {searchHandler} = useContext(contextProvider);
     const {hideSearchBar} = useContext(contextProvider);
+
     return (
         <div className={`${style.searchContainer} ${search === true && style.active}`}>
             <div className={style.field}>

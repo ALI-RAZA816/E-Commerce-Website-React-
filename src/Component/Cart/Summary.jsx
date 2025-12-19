@@ -7,18 +7,20 @@ import contextProvider from '../../assets/ContextProvider/ContextStore';
 
 
 export default function Summary() {
-    const location = useLocation();
 
+    const location = useLocation();
     const {cartItem} = useContext(contextProvider);
 
+    // calculations
     const subTotal = cartItem.reduce((item, currItem) =>{
         return item + currItem.price;
     },0);
-    
     const quantity = cartItem.reduce((item, currItem) =>{
         return item + currItem.quantity;
     },0);
 
+
+    // final calculations
     const SHIPPING_FEE = 10;
     const itemPrice = subTotal * quantity
     const totalPrice = itemPrice + SHIPPING_FEE;

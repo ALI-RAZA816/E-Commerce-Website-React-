@@ -4,17 +4,13 @@ import { LuShoppingCart } from "react-icons/lu";
 import style from '../Header/Header.module.css';
 import { FaAngleLeft } from "react-icons/fa6";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import contextProvider from "../../../assets/ContextProvider/ContextStore";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-
-
 
 export default function Header() {
-  const location = useLocation();
+
+  // context
   const {NavLinksHandler} = useContext(contextProvider);
   const {removeLinksHandler} = useContext(contextProvider);
   const {showNavlinks} = useContext(contextProvider);

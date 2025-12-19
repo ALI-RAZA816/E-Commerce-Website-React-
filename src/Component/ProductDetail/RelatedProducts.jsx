@@ -6,9 +6,12 @@ import contextProvider from '../../assets/ContextProvider/ContextStore';
 
 export default function RelatedProducts() {
 
+    // context
     const {products} = useContext(contextProvider);
-    const relatedProducts = products.slice(0,5);
     const {productDetailHandler} = useContext(contextProvider);
+    
+    // slice items
+    const relatedProducts = products.slice(0,5);
 
     return (
         <div className={style.relatedProducts} style={{margin:'13rem 0'}}>

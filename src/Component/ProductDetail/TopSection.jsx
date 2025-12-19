@@ -3,18 +3,18 @@ import style from '../ProductDetail/TopSection.module.css';
 import { useContext } from "react";
 import { RxCrossCircled } from "react-icons/rx";
 import { CiCircleCheck } from "react-icons/ci";
-
-
 import contextProvider from "../../assets/ContextProvider/ContextStore";
 
 export default function TopSection() {
 
+    // context
     const { title } = useContext(contextProvider);
     const { price } = useContext(contextProvider);
     const { image } = useContext(contextProvider);
     const { sizes } = useContext(contextProvider);
     const { changeImageHandler } = useContext(contextProvider);
     const { quantityHandler } = useContext(contextProvider);
+    const { cartQuantity } = useContext(contextProvider);
     const { otherImages } = useContext(contextProvider);
     const { activeSize } = useContext(contextProvider);
     const { ADDTOCARTHandler } = useContext(contextProvider);
@@ -62,7 +62,7 @@ export default function TopSection() {
                                 return <span key={index} className={activeSize === item ? style.activeBorder : undefined} onClick={() => sizeHandler(item)}>{item}</span>
                             })}
                         </div>
-                        <input type="number" onChange={quantityHandler} min={1} placeholder='1' />
+                        <input type="number" value={cartQuantity} onChange={quantityHandler} min={1} placeholder='1' />
                         <button onClick={ADDTOCARTHandler}>Add to cart</button>
                     </div>
                     <ul>

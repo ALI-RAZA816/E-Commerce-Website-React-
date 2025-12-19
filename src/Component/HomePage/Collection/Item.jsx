@@ -1,7 +1,7 @@
-import { useContext } from 'react';
 import style from '../Collection/Item.module.css';
 
 export default function Item({title,image,price}) {
+  
   return (
     <div className={style.card}>
       <div className={style.img}>

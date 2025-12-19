@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 import { useContext } from 'react';
 import contextProvider from '../../../assets/ContextProvider/ContextStore';
 
-
 export default function BestSeller() {
+
+    // context
     const {products} = useContext(contextProvider);
     const {productDetailHandler} = useContext(contextProvider);
-      const BestSeller = products.slice(0,5);
+
+    // splice items
+    const BestSeller = products.slice(0,5);
+    
     return (
         <div className={style.BestSeller}>
             <h1>Best <span>Seller</span></h1>
